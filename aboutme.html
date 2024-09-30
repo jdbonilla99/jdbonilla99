@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .about-me {
+            background-image: url('Jonathan.jpeg'); /* Path to the image */
+            background-size: 150%; /* Zoom out by increasing size */
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            position: relative;
+            min-height: 100vh; /* Allow the section to grow if content overflows */
+        }
+
+        .about-me::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Reduces transparency */
+            z-index: 1;
+        }
+
+        .about-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.1); /* Slight background for text */
+            border-radius: 10px;
+        }
+
+        h1 {
+            font-size: 3rem;
+        }
+
+        p {
+            font-size: 1.2rem;
+        }
+
+        .lists {
+            margin-top: 20px;
+        }
+
+        .list-container {
+            margin-bottom: 30px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        ul li {
+            background-color: rgba(255, 255, 255, 0.3);
+            margin: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            width: 30%;
+            text-align: center;
+        }
+
+        .home-link {
+            margin-top: 20px;
+        }
+
+        .home-link a {
+            text-decoration: none;
+            font-size: 1.5rem;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+
+    <section class="about-me">
+        <div class="about-content">
+            <h1>About Jonathan Bonilla</h1>
+            <p>I am a dedicated engineer with expertise in medical devices and a passion for developing innovative solutions.</p>
+            
+            <!-- Skills Section -->
+            <div class="lists">
+                <div class="list-container">
+                    <h2>Skills</h2>
+                    <ul>
+                        <li>Medical Devices</li>
+                        <li>Biomedical Engineering</li>
+                        <li>Robotics</li>
+                        <li>SolidWorks</li>
+                        <li>3D Printing</li>
+                        <li>Technical Writing</li>
+                        <li>Data Analysis</li>
+                        <li>Regulatory Compliance</li>
+                    </ul>
+                </div>
+                
+                <!-- Soft Skills Section -->
+                <div class="list-container">
+                    <h2>Soft Skills</h2>
+                    <ul>
+                        <li>Leadership</li>
+                        <li>Teamwork</li>
+                        <li>Problem Solving</li>
+                        <li>Communication</li>
+                        <li>Adaptability</li>
+                    </ul>
+                </div>
+
+                <!-- Languages Section -->
+                <div class="list-container">
+                    <h2>Languages</h2>
+                    <ul>
+                        <li>English</li>
+                        <li>Spanish (Native)</li>
+                        <li>Italian (Proficiency)</li>
+                        <li>French (Intermediate)</li>
+                        <li>Mandarin (Basic)</li>
+                        <li>Portuguese (Basic)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Return Home Link -->
+            <div class="home-link">
+                <a href="index.html">Return to Home</a>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
+
