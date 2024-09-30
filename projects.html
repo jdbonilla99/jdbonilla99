@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects</title>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Montserrat:wght@400&display=swap" rel="stylesheet">
@@ -13,7 +15,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
         body {
-            background: linear-gradient(135deg, #e0e0e0, #a9a9a9); /* Subtle gray gradient */
+            background: linear-gradient(135deg, #A9D18E, #556B2F); /* Neutral green gradient */
             color: #000;
             font-family: 'Montserrat', sans-serif;
             margin: 40px;
@@ -27,45 +29,41 @@
             padding-bottom: 10px;
             text-align: center;
         }
-        p, li {
-            font-size: 1.2rem;
-        }
-        ul {
-            padding-left: 20px;
-        }
-        li {
-            margin-bottom: 10px;
-        }
-        .projects {
+
+        /* Updated project-item styling */
+        .project-item {
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin: 50px 0;
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-        }
-        .image-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr); /* 3 images per row */
-            gap: 20px;
-            margin: 20px 0;
-        }
-        .image-container {
-            text-align: center;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+            background-color: white;
+            margin-bottom: 20px;
             transition: transform 0.3s ease;
         }
-        .image-container:hover {
+        .project-item:hover {
             transform: translateY(-10px);
         }
-        img {
-            max-width: 100%;
-            height: auto;
-            border: 2px solid #ddd;
-            border-radius: 10px;
+        .project-item img {
+            width: 100%;
+            height: auto; /* Ensure all images maintain their aspect ratio */
+            border: 2px solid #ddd; /* Border for the image */
+            border-radius: 10px; /* Rounded corners for the image */
             padding: 10px;
             background-color: white;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Image shadow */
+        }
+        .project-item p {
+            margin-top: 10px;
+            font-size: 1.2rem;
+            text-align: center;
+        }
+
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Grid layout */
+            gap: 20px;
         }
 
         a, button {
@@ -103,46 +101,42 @@
 </head>
 <body>
 
-    <section id="projects" class="projects">
-        <h2 data-aos="fade-down">Projects <i class="fas fa-briefcase"></i></h2>
-        <p data-aos="fade-up"><strong>Selected Projects:</strong> Below are some of my most notable projects across various fields, including biomedical engineering, mechanical design, and environmental sustainability. Each project demonstrates my technical skills, creativity, and commitment to solving real-world problems.</p>
-    </section>
+    <h2 data-aos="fade-down">Projects <i class="fas fa-briefcase"></i></h2>
 
-    <!-- Image Grid with AOS Animations -->
-    <div class="image-grid">
-        <div class="image-container" data-aos="fade-up" data-aos-duration="1000">
+    <div class="image-gallery">
+        <div class="project-item" data-aos="fade-up" data-aos-duration="1000">
             <img src="Armprostheses.png" alt="3D-Printed Arm Prostheses">
-            <p><strong>3D-Printed Arm Prostheses for LMICs:</strong> Designed affordable, functional arm prostheses for low- and middle-income countries (LMICs), focusing on Honduras. Using 3D printing and inexpensive materials like polypropylene and thermoplastics, the prostheses offer a customizable solution for individuals with arm amputations.</p>
+            <p><strong>3D-Printed Arm Prostheses for LMICs:</strong> Designed affordable, functional arm prostheses for low- and middle-income countries (LMICs), with a focus on regions such as Honduras. Using 3D printing technology and inexpensive materials like polypropylene and thermoplastics, the prostheses offer a customizable solution to individuals with arm amputations.</p>
         </div>
-        <div class="image-container" data-aos="fade-up" data-aos-duration="1200">
+        <div class="project-item" data-aos="fade-up" data-aos-duration="1200">
             <img src="laparoscopic.png" alt="Laparoscopic Probe">
             <p><strong>Laparoscopic Probe for Prostate Cancer Margin Detection:</strong> Developed a laparoscopic bioimpedance probe designed to detect positive surgical margins in prostate cancer patients during laparoscopic prostatectomy.</p>
         </div>
-        <div class="image-container" data-aos="fade-up" data-aos-duration="1400">
+        <div class="project-item" data-aos="fade-up" data-aos-duration="1400">
             <img src="nanoparticlescancer.png" alt="Nanotechnology for Cancer Treatment">
             <p><strong>Gold Nanoparticle-Enhanced Radiation Therapy for Cancer:</strong> Developed a novel treatment for pancreatic cancer using gold nanoparticles functionalized with P1G4 antibodies.</p>
         </div>
-        <div class="image-container" data-aos="fade-up" data-aos-duration="1600">
+        <div class="project-item" data-aos="fade-up" data-aos-duration="1600">
             <img src="Bridge.png" alt="Bridge Design Project">
             <p><strong>ENGS 33 Bridge Design Project:</strong> Designed a truss bridge as part of a solid mechanics course to test structural efficiency and material usage.</p>
         </div>
-        <div class="image-container" data-aos="fade-up" data-aos-duration="1800">
+        <div class="project-item" data-aos="fade-up" data-aos-duration="1800">
             <img src="Calculator.png" alt="UART Calculator Project">
-            <p><strong>ENGS 31 UART Calculator Project:</strong> This project involved developing a UART-based calculator using a Basys 3 board and a PS/2 keyboard.</p>
+            <p><strong>ENGS 31 UART Calculator Project:</strong> This project involved the development of a UART-based calculator using a Basys 3 board and a PS/2 keyboard.</p>
         </div>
-        <div class="image-container" data-aos="fade-up" data-aos-duration="2000">
+        <div class="project-item" data-aos="fade-up" data-aos-duration="2000">
             <img src="microfluidic.png" alt="Microfluidic Cervical Cancer Device">
             <p><strong>Point-of-Care Cervical Cancer HPV Screening Device:</strong> Developed a low-cost, point-of-care device aimed at improving cervical cancer screening, particularly in low-resource settings.</p>
         </div>
-        <div class="image-container" data-aos="fade-up" data-aos-duration="2200">
+        <div class="project-item" data-aos="fade-up" data-aos-duration="2200">
             <img src="Recycling.png" alt="Recycling Project">
             <p><strong>Bottles, Bins, and Beyond (Recycling Contamination Reduction):</strong> Developed a recycling bin system aimed at reducing contamination in beverage container recycling.</p>
         </div>
-        <div class="image-container" data-aos="fade-up" data-aos-duration="2400">
+        <div class="project-item" data-aos="fade-up" data-aos-duration="2400">
             <img src="nanoparticlesglucose.png" alt="Glucose Monitor using Nanoparticles">
             <p><strong>Sweat-Based Glucose Monitor:</strong> Developed a non-invasive glucose monitoring device that uses sweat as a medium to measure glucose levels, eliminating the need for blood samples.</p>
         </div>
-        <div class="image-container" data-aos="fade-up" data-aos-duration="2600">
+        <div class="project-item" data-aos="fade-up" data-aos-duration="2600">
             <img src="NiFe.png" alt="NiFe Permanent Magnets">
             <p><strong>NiFe Permanent Magnets for Electric Motors and Turbines:</strong> Investigated the properties of NiFe (Nickel-Iron) permanent magnets for potential applications in electric motors and wind turbines.</p>
         </div>
@@ -163,5 +157,3 @@
 
 </body>
 </html>
-
-
