@@ -6,18 +6,24 @@
     <title>Education & Courses</title>
     <style>
         body {
-            background-color: #f4f4f9;
+            background-image: url('bakerberry.png'); /* Path to your background image */
+            background-size: cover; /* Ensures the image covers the entire background */
+            background-position: center; /* Centers the background image */
+            background-attachment: fixed; /* Keeps the image fixed in place when scrolling */
             font-family: Arial, sans-serif;
             margin: 40px;
+            color: #000; /* Set text color to black */
         }
         h2 {
             font-size: 2.5rem;
-            color: #4facfe;
-            border-bottom: 2px solid #e0e0e0;
+            color: #003366; /* Darker blue for title */
+            border-bottom: 2px solid #001f3f; /* Darker color for the line */
             padding-bottom: 10px;
         }
         .education-item {
             margin-bottom: 40px;
+            padding: 20px;
+            /* No background color or border-radius to remove white box */
         }
         ul {
             padding: 0;
@@ -27,13 +33,14 @@
             justify-content: space-between;
         }
         li {
-            background-color: #fff;
             margin: 10px;
             padding: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             font-size: 1.1rem;
             width: 30%; /* Width of each item to display side by side */
             box-sizing: border-box;
+            background-color: rgba(255, 255, 255, 0.9); /* Keeps white background with slight transparency for coursework */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
         }
 
         /* Logo styling */
@@ -110,9 +117,5 @@
 
 </body>
 </html>
-
-
-
-
 
 
