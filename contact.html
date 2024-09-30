@@ -57,7 +57,16 @@
             display: block;
             margin: 10px 0;
             color: white;
-            font-size: 2rem;
+            font-size: 3rem; /* Increased icon size */
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: #0077B5; /* LinkedIn blue color on hover */
+        }
+
+        .social-icons a.github:hover {
+            color: #333; /* GitHub dark grey */
         }
 
         .resume {
@@ -66,6 +75,7 @@
             right: 20px;
             color: white;
             font-weight: bold;
+            font-size: 1.5rem; /* Increased resume button size */
         }
 
         .resume a {
@@ -78,9 +88,13 @@
         }
 
         .back-home a {
-            color: white;
+            color: yellow; /* Changed color to yellow */
             text-decoration: none;
-            font-size: 1.2rem;
+            font-size: 1.5rem; /* Increased font size */
+        }
+
+        .back-home a:hover {
+            color: #fff200; /* Brighter yellow on hover */
         }
 
         /* Logo styling */
@@ -106,8 +120,8 @@
     </form>
 
     <div class="social-icons">
-        <a href="https://www.linkedin.com/in/jdbonilla" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/jdbonilla" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/jdbonilla" target="_blank" class="linkedin"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/jdbonilla" target="_blank" class="github"><i class="fab fa-github"></i></a>
     </div>
 
     <div class="resume">
@@ -123,4 +137,5 @@
 
 </body>
 </html>
+
 
