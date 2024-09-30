@@ -4,68 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Education & Courses</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Montserrat:wght@400&display=swap" rel="stylesheet">
+    <!-- AOS Library -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
         body {
-            background-image: url('bakerberry.png'); /* Path to your background image */
-            background-size: cover; /* Ensures the image covers the entire background */
-            background-position: center; /* Centers the background image */
-            background-attachment: fixed; /* Keeps the image fixed in place when scrolling */
-            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #4FACFE, #003366);
+            color: #000;
+            font-family: 'Montserrat', sans-serif;
             margin: 40px;
-            color: #000; /* Set text color to black */
         }
         h2 {
+            font-family: 'Lora', serif;
             font-size: 2.5rem;
-            color: #003366; /* Darker blue for title */
-            border-bottom: 2px solid #001f3f; /* Darker color for the line */
+            color: #003366;
+            border-bottom: 2px solid #001f3f;
             padding-bottom: 10px;
-        }
-        .education-item {
-            margin-bottom: 40px;
-            padding: 20px;
-            background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
-            border-radius: 10px; /* Rounded corners */
-        }
-        .education-item p {
-            font-weight: bold; /* Make text bold */
-            font-size: 1.2rem; /* Increase the font size */
-        }
-        ul {
-            padding: 0;
-            list-style-type: none;
-            display: flex;
-            flex-wrap: wrap; /* Ensures items wrap into new rows */
-            justify-content: space-between;
-        }
-        li {
-            margin: 10px;
-            padding: 10px;
-            font-size: 1.1rem;
-            width: 30%; /* Width of each item to display side by side */
-            box-sizing: border-box;
-            background-color: rgba(255, 255, 255, 0.9); /* Keeps white background with slight transparency for coursework */
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-        }
-
-        /* Logo styling */
-        .logo {
-            width: 112.5px;
-            margin: 20px auto;
-            display: block;
-            background-color: transparent; /* No white background */
-            border: none;
-            padding: 0;
-        }
-
-        .home-link {
-            margin-top: 40px;
             text-align: center;
         }
-        .home-link a {
+        .education {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 50px 0;
+        }
+        .education-item {
+            max-width: 700px;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+            transition: transform 0.3s ease;
+        }
+        .education-item:hover {
+            transform: translateY(-10px);
+        }
+        a, button {
+            background-color: #FFD700;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
             text-decoration: none;
-            font-size: 1.5rem;
-            color: #007bff;
+            transition: all 0.3s ease;
+        }
+        a:hover, button:hover {
+            background-color: #003366;
+            color: #FFD700;
         }
     </style>
 </head>
@@ -73,52 +62,33 @@
 
     <!-- Education Section -->
     <section id="education" class="education">
-        <h2>Education</h2>
-        <div class="education-item">
+        <h2 data-aos="fade-down">Education <i class="fas fa-graduation-cap"></i></h2>
+        <div class="education-item" data-aos="fade-up" data-aos-duration="1000">
             <h3>Master of Science in Engineering Sciences (Medical Devices)</h3>
             <p><strong>Dartmouth College, Thayer School of Engineering</strong></p>
             <p><em>2022 - 2024</em></p>
             <p>Focus: Medical Devices, Biomedical Engineering</p>
         </div>
 
-        <div class="education-item">
+        <div class="education-item" data-aos="fade-up" data-aos-duration="1200">
             <h3>Bachelor of Engineering (Biomechanical & Bioelectronics)</h3>
             <p><strong>Dartmouth College, Thayer School of Engineering</strong></p>
             <p><em>2017 - 2022</em></p>
             <p>Focus: Biomaterials, Bioelectronics, Biomechanics</p>
         </div>
 
-        <div class="education-item">
+        <div class="education-item" data-aos="fade-up" data-aos-duration="1400">
             <h3>Bachelor of Arts in Biomathematics & Engineering Sciences</h3>
             <p><strong>Dartmouth College</strong></p>
             <p><em>2017 - 2021</em></p>
             <p>Focus: Biomathematics, Biomedical Engineering</p>
         </div>
     </section>
-    <!-- End of Education Section -->
 
-    <!-- Relevant Coursework Section -->
-    <section id="coursework" class="coursework">
-        <h2>Relevant Coursework</h2>
-        <ul>
-            <li>Biomedical Device Design</li>
-            <li>Medical Device Regulation</li>
-            <li>Biomaterials Science</li>
-            <li>Computer Science I & II</li>
-            <li>Robotics</li>
-            <li>Introduction to Machine Learning</li>
-            <li>Human-Centered Design</li>
-        </ul>
-    </section>
-    <!-- End of Coursework Section -->
-
-    <!-- JB Logo -->
-    <img src="JBlogo-removebg-preview.png" alt="JB Logo" class="logo">
-
-    <!-- Return to Home Link -->
-    <div class="home-link">
-        <a href="index.html">Back to Home</a>
-    </div>
+    <!-- AOS Script Initialization -->
+    <script>
+      AOS.init();
+    </script>
 
 </body>
 </html>
