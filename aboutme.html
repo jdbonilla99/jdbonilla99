@@ -3,80 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects</title> make return home button on about me page the same color as in the previous code for projects
+    <title>About Me</title>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Montserrat:wght@400&display=swap" rel="stylesheet">
     <!-- AOS Library -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
-        body {
-            background: linear-gradient(135deg, #A9D18E, #556B2F); /* Neutral green gradient */
-            color: #000;
+            body {
             font-family: 'Montserrat', sans-serif;
-            margin: 40px;
-            padding-bottom: 100px;
-        }
-        h2 {
-            font-family: 'Lora', serif;
-            font-size: 2.5rem;
-            color: #003366;
-            border-bottom: 2px solid #001f3f;
-            padding-bottom: 10px;
-            text-align: center;
+            margin: 0;
+            padding: 0;
+            color: #000;
         }
 
-        /* Updated project-item styling */
-        .project-item {
+        .about-me {
+            background-image: url('Jonathan.jpeg'); /* Path to the image */
+            background-size: 150%; /* Zoom out by increasing size */
+            background-position: center;
             display: flex;
-            flex-direction: column;
+            justify-content: center;
             align-items: center;
-            padding: 20px;
+            color: black; /* Changed from white to black */
+            position: relative;
+            min-height: 130vh; /* Increase the height to prevent content from being cut off */
+        }
+
+        .about-me::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7); /* Darken background more */
+            z-index: 1;
+        }
+
+        .about-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 30px 30px 60px; /* Increase bottom padding */
+            background-color: rgba(255, 255, 255, 0.9); /* White box background */
             border-radius: 10px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
-            background-color: white;
-            margin-bottom: 20px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Soft shadow */
             transition: transform 0.3s ease;
         }
-        .project-item:hover {
+
+        .about-content:hover {
             transform: translateY(-10px);
         }
-        .project-item img {
-            width: 100%;
-            height: auto; /* Ensure all images maintain their aspect ratio */
-            border: 2px solid #ddd; /* Border for the image */
-            border-radius: 10px; /* Rounded corners for the image */
-            padding: 10px;
-            background-color: white;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Image shadow */
+
+        h1 {
+            font-family: 'Lora', serif;
+            font-size: 3rem;
+            color: black; /* Changed from #003366 to black */
+            border-bottom: 2px solid #001f3f;
+            padding-bottom: 10px;
         }
-        .project-item p {
-            margin-top: 10px;
+
+        p {
             font-size: 1.2rem;
+            color: black; /* Changed from white to black */
+        }
+
+        .lists {
+            margin-top: 20px;
+        }
+
+        .list-container {
+            margin-bottom: 30px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        ul li {
+            background-color: #B0C4DE; /* Muted blue-gray background */
+            margin: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            width: 30%;
             text-align: center;
+            transition: transform 0.3s ease;
+            color: #000; /* Ensure text remains black */
         }
 
-        .image-gallery {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr); /* Grid layout */
-            gap: 20px;
+        ul li:hover {
+            transform: translateY(-5px);
         }
 
-        a, button {
-            background-color: #003366;
-            color: #FFD700;
+        .home-link {
+            margin-top: 40px; /* Increased margin to avoid button getting cut off */
+            text-align: center;
+            padding-bottom: 50px; /* Add padding at the bottom */
+        }
+
+        .home-link a {
+            text-decoration: none;
+            font-size: 1.5rem;
+            color: #003366;
+            background-color: #B0C4DE; /* Muted blue-gray background */
             padding: 10px 20px;
             border-radius: 5px;
-            text-decoration: none;
             transition: all 0.3s ease;
         }
-        a:hover, button:hover {
-            background-color: #FFD700;
-            color: #003366;
+
+        .home-link a:hover {
+            background-color: #003366;
+            color: #B0C4DE;
         }
 
         /* Logo styling */
@@ -84,71 +125,76 @@
             width: 112.5px;
             margin: 20px auto;
             display: block;
-            background-color: transparent;
+            border: 2px solid #ddd; /* Outline (border) to match the format */
+            border-radius: 10px; /* Rounds the corners */
+            padding: 10px; /* Padding to give some spacing around the logo */
+            background-color: transparent; /* No background color */
+            transition: transform 0.3s ease;
         }
 
-        .home-link {
-            margin-top: 40px;
-            text-align: center;
-            padding-bottom: 50px;
-        }
-        .home-link a {
-            text-decoration: none;
-            font-size: 1.5rem;
-            color: #007bff;
+        .logo:hover {
+            transform: translateY(-5px); /* Hover effect for the logo */
         }
     </style>
 </head>
 <body>
 
-    <h2 data-aos="fade-down">Projects <i class="fas fa-briefcase"></i></h2>
+    <section class="about-me">
+        <div class="about-content" data-aos="fade-up" data-aos-duration="2000">
+            <h1>About Jonathan Bonilla</h1>
+            <p>I am a dedicated engineer with expertise in medical devices and a passion for developing innovative solutions.</p>
+            
+            <!-- Skills Section -->
+            <div class="lists">
+                <div class="list-container" data-aos="fade-up" data-aos-duration="2200">
+                    <h2>Skills</h2>
+                    <ul>
+                        <li>Medical Devices</li>
+                        <li>Biomedical Engineering</li>
+                        <li>Robotics</li>
+                        <li>SolidWorks</li>
+                        <li>3D Printing</li>
+                        <li>Technical Writing</li>
+                        <li>Data Analysis</li>
+                        <li>Regulatory Compliance</li>
+                    </ul>
+                </div>
+                
+                <!-- Soft Skills Section -->
+                <div class="list-container" data-aos="fade-up" data-aos-duration="2400">
+                    <h2>Soft Skills</h2>
+                    <ul>
+                        <li>Leadership</li>
+                        <li>Teamwork</li>
+                        <li>Problem Solving</li>
+                        <li>Communication</li>
+                        <li>Adaptability</li>
+                    </ul>
+                </div>
 
-    <div class="image-gallery">
-        <div class="project-item" data-aos="fade-up" data-aos-duration="1000">
-            <img src="Armprostheses.png" alt="3D-Printed Arm Prostheses">
-            <p><strong>3D-Printed Arm Prostheses for LMICs:</strong> Designed affordable, functional arm prostheses for low- and middle-income countries (LMICs), with a focus on regions such as Honduras. Using 3D printing technology and inexpensive materials like polypropylene and thermoplastics, the prostheses offer a customizable solution to individuals with arm amputations.</p>
-        </div>
-        <div class="project-item" data-aos="fade-up" data-aos-duration="1200">
-            <img src="laparoscopic.png" alt="Laparoscopic Probe">
-            <p><strong>Laparoscopic Probe for Prostate Cancer Margin Detection:</strong> Developed a laparoscopic bioimpedance probe designed to detect positive surgical margins in prostate cancer patients during laparoscopic prostatectomy.</p>
-        </div>
-        <div class="project-item" data-aos="fade-up" data-aos-duration="1400">
-            <img src="nanoparticlescancer.png" alt="Nanotechnology for Cancer Treatment">
-            <p><strong>Gold Nanoparticle-Enhanced Radiation Therapy for Cancer:</strong> Developed a novel treatment for pancreatic cancer using gold nanoparticles functionalized with P1G4 antibodies.</p>
-        </div>
-        <div class="project-item" data-aos="fade-up" data-aos-duration="1600">
-            <img src="Bridge.png" alt="Bridge Design Project">
-            <p><strong>ENGS 33 Bridge Design Project:</strong> Designed a truss bridge as part of a solid mechanics course to test structural efficiency and material usage.</p>
-        </div>
-        <div class="project-item" data-aos="fade-up" data-aos-duration="1800">
-            <img src="Calculator.png" alt="UART Calculator Project">
-            <p><strong>ENGS 31 UART Calculator Project:</strong> This project involved the development of a UART-based calculator using a Basys 3 board and a PS/2 keyboard.</p>
-        </div>
-        <div class="project-item" data-aos="fade-up" data-aos-duration="2000">
-            <img src="microfluidic.png" alt="Microfluidic Cervical Cancer Device">
-            <p><strong>Point-of-Care Cervical Cancer HPV Screening Device:</strong> Developed a low-cost, point-of-care device aimed at improving cervical cancer screening, particularly in low-resource settings.</p>
-        </div>
-        <div class="project-item" data-aos="fade-up" data-aos-duration="2200">
-            <img src="Recycling.png" alt="Recycling Project">
-            <p><strong>Bottles, Bins, and Beyond (Recycling Contamination Reduction):</strong> Developed a recycling bin system aimed at reducing contamination in beverage container recycling.</p>
-        </div>
-        <div class="project-item" data-aos="fade-up" data-aos-duration="2400">
-            <img src="nanoparticlesglucose.png" alt="Glucose Monitor using Nanoparticles">
-            <p><strong>Sweat-Based Glucose Monitor:</strong> Developed a non-invasive glucose monitoring device that uses sweat as a medium to measure glucose levels, eliminating the need for blood samples.</p>
-        </div>
-        <div class="project-item" data-aos="fade-up" data-aos-duration="2600">
-            <img src="NiFe.png" alt="NiFe Permanent Magnets">
-            <p><strong>NiFe Permanent Magnets for Electric Motors and Turbines:</strong> Investigated the properties of NiFe (Nickel-Iron) permanent magnets for potential applications in electric motors and wind turbines.</p>
-        </div>
-    </div>
+                <!-- Languages Section -->
+                <div class="list-container" data-aos="fade-up" data-aos-duration="2600">
+                    <h2>Languages</h2>
+                    <ul>
+                        <li>English</li>
+                        <li>Spanish (Native)</li>
+                        <li>Italian (Proficiency)</li>
+                        <li>French (Intermediate)</li>
+                        <li>Mandarin (Basic)</li>
+                        <li>Portuguese (Basic)</li>
+                    </ul>
+                </div>
+            </div>
 
-    <!-- JB Logo -->
-    <img src="JBlogo-removebg-preview.png" alt="JB Logo" class="logo" data-aos="fade-up">
+            <!-- JB Logo -->
+            <img src="JBlogo-removebg-preview.png" alt="JB Logo" class="logo" data-aos="fade-up">
 
-    <!-- Return to Home Link -->
-    <div class="home-link" data-aos="fade-up">
-        <a href="index.html">Back to Home</a>
-    </div>
+            <!-- Return Home Link -->
+            <div class="home-link" data-aos="fade-up" data-aos-duration="2400">
+                <a href="index.html">Return to Home</a>
+            </div>
+        </div>
+    </section>
 
     <!-- AOS Script Initialization -->
     <script>
