@@ -26,7 +26,7 @@
             align-items: center;
             color: black; /* Changed from white to black */
             position: relative;
-            min-height: 100vh; /* Allow the section to grow if content overflows */
+            min-height: 120vh; /* Increase the height to prevent content from being cut off */
         }
 
         .about-me::before {
@@ -85,13 +85,15 @@
         }
 
         ul li {
-            background-color: rgba(255, 255, 255, 0.3);
+            background-color: rgba(255, 255, 255, 0.9); /* Light color to make it readable */
             margin: 10px;
             padding: 10px;
             border-radius: 5px;
             width: 30%;
             text-align: center;
             transition: transform 0.3s ease;
+            background-color: #FFD700; /* Set a gold background for contrast */
+            color: #000; /* Ensure text is black */
         }
 
         ul li:hover {
@@ -99,7 +101,7 @@
         }
 
         .home-link {
-            margin-top: 20px;
+            margin-top: 40px; /* Increased margin to avoid button getting cut off */
             text-align: center;
         }
 
@@ -133,13 +135,13 @@
 <body>
 
     <section class="about-me">
-        <div class="about-content" data-aos="fade-up" data-aos-duration="1000">
+        <div class="about-content" data-aos="fade-up" data-aos-duration="2000">
             <h1>About Jonathan Bonilla</h1>
             <p>I am a dedicated engineer with expertise in medical devices and a passion for developing innovative solutions.</p>
             
             <!-- Skills Section -->
             <div class="lists">
-                <div class="list-container" data-aos="fade-up" data-aos-duration="1200">
+                <div class="list-container" data-aos="fade-up" data-aos-duration="2200">
                     <h2>Skills</h2>
                     <ul>
                         <li>Medical Devices</li>
@@ -154,7 +156,7 @@
                 </div>
                 
                 <!-- Soft Skills Section -->
-                <div class="list-container" data-aos="fade-up" data-aos-duration="1400">
+                <div class="list-container" data-aos="fade-up" data-aos-duration="2400">
                     <h2>Soft Skills</h2>
                     <ul>
                         <li>Leadership</li>
@@ -166,7 +168,7 @@
                 </div>
 
                 <!-- Languages Section -->
-                <div class="list-container" data-aos="fade-up" data-aos-duration="1600">
+                <div class="list-container" data-aos="fade-up" data-aos-duration="2600">
                     <h2>Languages</h2>
                     <ul>
                         <li>English</li>
@@ -183,7 +185,7 @@
             <img src="JBlogo-removebg-preview.png" alt="JB Logo" class="logo" data-aos="fade-up" data-aos-duration="1800">
 
             <!-- Return Home Link -->
-            <div class="home-link" data-aos="fade-up" data-aos-duration="2000">
+            <div class="home-link" data-aos="fade-up" data-aos-duration="2400">
                 <a href="index.html">Return to Home</a>
             </div>
         </div>
