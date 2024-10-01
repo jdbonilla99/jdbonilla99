@@ -5,107 +5,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jonathan Bonilla's Portfolio</title>
     <style>
-        /* Basic Reset */
-        * {
+        /* General styling for body */
+        body {
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
         }
 
-        body, html {
-            height: 100%;
-            font-family: Arial, sans-serif;
-        }
-
-        /* Container for the page */
+        /* Wrapper to position image and text */
         .container {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            text-align: center;
-            background: url('/mnt/data/scientifique-qui-fait-des-recherches-dans-un-laboratoire-il-tient-dans-sa-main-une-main-robotisee.jpg') no-repeat center center;
-            background-size: cover;
-        }
-
-        /* Blurred background effect */
-        .container::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: inherit;
-            filter: blur(8px);
-            z-index: -1;
-        }
-
-        /* Content box for text */
-        .content {
             position: relative;
-            background-color: rgba(0, 128, 128, 0.7);
-            padding: 20px;
-            border-radius: 10px;
+            text-align: center;
             color: white;
-            z-index: 1;
         }
 
-        .content h1 {
-            font-size: 3em;
-            margin-bottom: 20px;
+        /* Styling for main background image */
+        .bg-image {
+            width: 100%;
+            height: auto;
         }
 
+        /* Positioning logo at top left */
+        .logo {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 150px; /* Adjust size as needed */
+        }
+
+        /* Main title text */
+        .portfolio-title {
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 48px;
+            font-weight: bold;
+        }
+
+        /* Navigation links */
         .nav-links {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            font-size: 1.2em;
+            position: absolute;
+            bottom: 10%;
+            left: 50%;
+            transform: translateX(-50%);
         }
 
         .nav-links a {
+            margin: 0 20px;
+            font-size: 20px;
             color: white;
             text-decoration: none;
-            transition: color 0.3s;
         }
 
+        /* Style links on hover */
         .nav-links a:hover {
-            color: #ddd;
-        }
-
-        /* Logo Style */
-        .logo {
-            font-size: 2.5em;
-            margin-top: 20px;
-            border: 2px solid white;
-            padding: 10px;
-            border-radius: 50%;
-            width: 80px;
-            height: 80px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
+
     <div class="container">
-        <div class="content">
-            <h1>Jonathan Bonilla's Portfolio</h1>
-            <div class="nav-links">
-                <a href="#about">About me</a>
-                <a href="#research">Master's Research</a>
-                <a href="#projects">Projects</a>
-                <a href="#education">Education</a>
-                <a href="#contact">Contact Me</a>
-            </div>
-            <div class="logo">
-                JB
-            </div>
+        <!-- Background image -->
+        <img src="path-to-your-background-image.jpg" alt="Background Image" class="bg-image">
+
+        <!-- Logo at top left -->
+        <img src="path-to-your-logo-image.png" alt="JB Logo" class="logo">
+
+        <!-- Main title in the center -->
+        <div class="portfolio-title">Jonathan Bonilla's Portfolio</div>
+
+        <!-- Navigation links at the bottom -->
+        <div class="nav-links">
+            <a href="#about">About Me</a>
+            <a href="#research">Master's Research</a>
+            <a href="#projects">Projects</a>
+            <a href="#education">Education</a>
+            <a href="#contact">Contact Me</a>
         </div>
     </div>
+
 </body>
 </html>
+
 
 
