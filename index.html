@@ -13,30 +13,38 @@
             font-family: Arial, sans-serif;
             text-align: center;
             padding: 50px;
-            color: white; /* Set all text to white */
+            color: black; /* Set all text to black */
             position: relative;
             min-height: 100vh;
         }
 
+        /* Faded background using an overlay */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(255, 255, 255, 0.7); /* White overlay with 70% opacity */
+            z-index: 0;
+        }
+
         h1 {
             font-size: 3rem;
-            color: white; /* Title is white */
+            color: black; /* Title is black */
             margin-top: 150px; /* Lower the title */
-            background-color: rgba(0, 0, 0, 0.5); /* Dark background with transparency */
-            display: inline-block; /* Only applies background to text */
-            padding: 10px; /* Add some space around the text */
-            border-radius: 10px; /* Optional: round the corners for a smoother look */
+            position: relative;
+            z-index: 1; /* Ensure text is above the overlay */
         }
 
         nav a {
             text-decoration: none;
-            color: white; /* Navigation links are white */
+            color: black; /* Navigation links are black */
             margin: 20px;
             font-size: 1.5rem;
-            background-color: rgba(0, 0, 0, 0.5); /* Dark background with transparency */
-            padding: 5px 10px; /* Add some space around the links */
-            display: inline-block; /* To make the background cover only the text */
-            border-radius: 5px; /* Optional: round the corners for a smoother look */
+            position: relative;
+            z-index: 1; /* Ensure links are above the overlay */
         }
 
         nav {
@@ -50,6 +58,7 @@
             transform: translateX(-50%);
             width: 225px;
             opacity: 0.9;
+            z-index: 1; /* Ensure the logo is above the overlay */
         }
     </style>
 </head>
