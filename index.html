@@ -40,7 +40,7 @@
 
         h1 {
             font-size: 3rem;
-            color: black; /* Title color updated to black */
+            color: #003366; /* Title color */
             margin-top: 120px;
             position: relative;
             z-index: 1; /* Ensure text is above the overlay */
@@ -62,7 +62,7 @@
 
         nav a {
             text-decoration: none;
-            color: #003366; /* Navigation links */
+            color: #003366; /* Navigation links are black */
             margin: 20px;
             font-size: 1.5rem;
             position: relative;
@@ -76,7 +76,7 @@
         /* JB logo animation */
         .logo {
             position: absolute;
-            bottom: 170px; /* Move the logo upwards */
+            bottom: 60px; /* Adjusted starting point */
             left: 50%;
             transform: translateX(-50%);
             width: 225px;
@@ -88,11 +88,11 @@
         /* Animation keyframes for the JB logo */
         @keyframes emerge {
             0% {
-                bottom: 50px; /* Start the animation lower */
+                bottom: 20px; /* Start the animation lower */
                 opacity: 0;
             }
             100% {
-                bottom: 170px; /* End at a higher point to move the logo upwards */
+                bottom: 145px; /* End at a higher point of 135px */
                 opacity: 0.9;
             }
         }
@@ -100,7 +100,7 @@
 </head>
 <body>
 
-    <h1>Jonathan Bonilla's Website</h1>
+    <h1>Jonathan Bonilla's Portfolio</h1>
 
     <nav>
         <a href="aboutme.html">About Me & Skills</a>
