@@ -12,10 +12,6 @@
         }
 
         body {
-            background-image: url('med.jpeg'); 
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
             font-family: Arial, sans-serif;
             text-align: center;
             color: black; /* Set all text to black */
@@ -26,10 +22,24 @@
             overflow: hidden; /* Prevent scroll during animation */
         }
 
-        /* Faded background using an overlay */
-        body::before {
-            content: "";
-            position: fixed; /* Fixed to cover the entire viewport */
+        /* Blurred background using an overlay with the original background image */
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 0;
+            background-image: url('WhatsApp Image 2024-10-01 at 2.35.41 PM.jpeg'); /* Your original background image */
+            background-size: cover;
+            background-position: center;
+            filter: blur(10px); /* Blurs the background image */
+            z-index: -1; /* Ensures it stays behind the content */
+        }
+
+        /* Overlay to add semi-transparent color */
+        .overlay {
+            position: fixed;
             top: 0;
             left: 0;
             right: 0;
@@ -62,11 +72,19 @@
 
         nav a {
             text-decoration: none;
-            color: #003366; /* Navigation links are black */
+            color: white; /* Text color inside nav */
             margin: 20px;
             font-size: 1.5rem;
             position: relative;
             z-index: 1; /* Ensure links are above the overlay */
+            padding: 10px 20px; /* Padding inside the boxes */
+            background-color: #4FACFE; /* Color of the text boxes */
+            border-radius: 5px; /* Rounded corners for the boxes */
+            transition: background-color 0.3s ease; /* Smooth hover transition */
+        }
+
+        nav a:hover {
+            background-color: #003366; /* Change background color on hover */
         }
 
         nav {
@@ -99,6 +117,12 @@
     </style>
 </head>
 <body>
+
+    <!-- Blurred background image -->
+    <div class="background"></div>
+
+    <!-- Semi-transparent white overlay -->
+    <div class="overlay"></div>
 
     <h1>Jonathan Bonilla's Portfolio</h1>
 
