@@ -27,7 +27,7 @@
         /* Faded background using an overlay */
         body::before {
             content: "";
-            position: absolute;
+            position: fixed; /* Fixed to cover the entire viewport */
             top: 0;
             left: 0;
             right: 0;
@@ -74,7 +74,7 @@
         /* JB logo animation */
         .logo {
             position: absolute;
-            bottom: -50px; /* Start the logo closer to its final position */
+            bottom: 60px; /* Adjusted starting point */
             left: 50%;
             transform: translateX(-50%);
             width: 225px;
@@ -86,11 +86,11 @@
         /* Animation keyframes for the JB logo */
         @keyframes emerge {
             0% {
-                bottom: -50px;
+                bottom: 20px; /* Start the animation lower */
                 opacity: 0;
             }
             100% {
-                bottom: 120px;
+                bottom: 135px; /* End at a higher point of 135px */
                 opacity: 0.9;
             }
         }
