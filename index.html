@@ -35,7 +35,7 @@
         h1 {
             font-size: 3rem;
             color: #003366; /* Title is black */
-            margin-top: 150px; /* Lower the title */
+            margin-top: 120px; /* Adjusted margin to fit better */
             position: relative;
             z-index: 1; /* Ensure text is above the overlay */
         }
@@ -50,13 +50,13 @@
         }
 
         nav {
-            margin-top: 80px; /* Lower the navigation */
+            margin-top: 60px; /* Adjusted to fit the page better */
         }
 
         /* JB logo animation */
         .logo {
             position: absolute;
-            bottom: -150px; /* Start the logo off-screen */
+            bottom: -50px; /* Start the logo closer to its final position */
             left: 50%;
             transform: translateX(-50%);
             width: 225px;
@@ -68,11 +68,11 @@
         /* Animation keyframes for the JB logo */
         @keyframes emerge {
             0% {
-                bottom: -150px;
+                bottom: -50px;
                 opacity: 0;
             }
             100% {
-                bottom: 135px;
+                bottom: 120px;
                 opacity: 0.9;
             }
         }
