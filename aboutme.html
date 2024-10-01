@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +10,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <style>
-        body {
+            body {
             font-family: 'Montserrat', sans-serif;
             margin: 0;
             padding: 0;
@@ -25,7 +24,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            color: black;
+            color: black; /* Changed from white to black */
             position: relative;
             min-height: 130vh; /* Increase the height to prevent content from being cut off */
         }
@@ -59,14 +58,14 @@
         h1 {
             font-family: 'Lora', serif;
             font-size: 3rem;
-            color: black;
+            color: black; /* Changed from #003366 to black */
             border-bottom: 2px solid #001f3f;
             padding-bottom: 10px;
         }
 
         p {
             font-size: 1.2rem;
-            color: black;
+            color: black; /* Changed from white to black */
         }
 
         .lists {
@@ -93,7 +92,7 @@
             width: 30%;
             text-align: center;
             transition: transform 0.3s ease;
-            color: #000;
+            color: #000; /* Ensure text remains black */
         }
 
         ul li:hover {
@@ -101,41 +100,42 @@
         }
 
         .home-link {
-            margin-top: 40px;
+            margin-top: 40px; /* Increased margin to avoid button getting cut off */
             text-align: center;
-            padding-bottom: 50px;
+            padding-bottom: 50px; /* Add padding at the bottom */
         }
 
-        .home-link .button {
+        .home-link a {
             text-decoration: none;
             font-size: 1.5rem;
             color: #FFD700;
-            background-color: #003366;
+            background-color: #003366; 
             padding: 10px 20px;
             border-radius: 5px;
-            margin: 0 10px; /* Add margin between buttons */
             transition: all 0.3s ease;
         }
 
-        .home-link .button:hover {
+        .home-link a:hover {
             background-color: #FFD700;
             color: #003366;
         }
 
-        .logo {
-            width: 112.5px;
-            margin: 20px auto;
-            display: block;
-            border: 2px solid #ddd;
-            border-radius: 10px;
-            padding: 10px;
-            background-color: transparent;
-            transition: transform 0.3s ease;
-        }
+        
+/* Logo styling */
+.logo {
+    width: 112.5px;
+    margin: 20px auto;
+    display: block;
+    border: 2px solid #ddd; /* Highlighter yellow outline */
+    border-radius: 10px; /* Rounds the corners */
+    padding: 10px; /* Padding to give some spacing around the logo */
+    background-color: transparent; /* No background color */
+    transition: transform 0.3s ease;
+}
 
-        .logo:hover {
-            transform: translateY(-5px);
-        }
+.logo:hover {
+    transform: translateY(-5px); /* Hover effect for the logo */
+}
     </style>
 </head>
 <body>
@@ -143,7 +143,7 @@
     <section class="about-me">
         <div class="about-content" data-aos="fade-up" data-aos-duration="2000">
             <h1>About Jonathan Bonilla</h1>
-            <p>I am a dedicated engineer with expertise in medical devices and a passion for developing innovative solutions.</p>
+            <p>I am a dedicated engineer with expertise in medical devices and a passion for developing innovative solutions.  Interested in design, health and the intersection of technology and poverty alleviation.</p>
             
             <!-- Technical Skills Section -->
             <div class="lists">
@@ -190,10 +190,9 @@
             <!-- JB Logo -->
             <img src="JBlogo-removebg-preview.png" alt="JB Logo" class="logo" data-aos="fade-up">
 
-            <!-- Home and Next Links -->
+            <!-- Return Home Link -->
             <div class="home-link" data-aos="fade-up" data-aos-duration="2200">
-                <a href="index.html" class="button">Home</a>
-                <a href="masters.html" class="button">Next</a> <!-- Linked to masters.html -->
+                <a href="index.html">Return to Home</a>
             </div>
         </div>
     </section>
