@@ -12,22 +12,7 @@
             box-sizing: border-box;
         }
 
-        /* Ensuring full height of the body */
-        html, body {
-            height: 100%;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            position: relative;
-            min-height: 100vh;
-            padding: 50px;
-            box-sizing: border-box;
-            overflow: hidden; /* Prevent scroll during animation */
-        }
-
-        /* Background image with blur effect */
+        /* Background image and blur effect */
         .background {
             background-image: url('scientifique-qui-fait-des-recherches-dans-un-laboratoire-il-tient-dans-sa-main-une-main-robotisee.jpg');
             background-size: cover;
@@ -43,109 +28,80 @@
 
         /* Blue overlay with semi-transparency */
         .overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: rgba(79, 172, 254, 0.8); /* Transparent blue overlay */
-            z-index: 0;
+            background: rgba(79, 172, 254, 0.8); /* Transparent blue overlay */
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
         }
 
         /* Portfolio title */
-        h1 {
+        .content h1 {
             font-size: 3em;
             color: white;
-            margin-top: 120px;
-            position: relative;
-            z-index: 1; /* Ensure text is above the overlay */
-            animation: slideIn 1.5s ease-out forwards;
-            opacity: 0; /* Start as invisible */
+            font-family: Arial, sans-serif;
+            margin-bottom: 30px;
         }
 
-        /* Slide-in animation for the title */
-        @keyframes slideIn {
-            0% {
-                transform: translateY(-100%);
-                opacity: 0;
-            }
-            100% {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-
-        /* Navigation links */
+        /* Navigation links styling */
         nav ul {
             display: flex;
             justify-content: space-around;
             list-style: none;
             width: 50%;
-            margin: 60px auto;
+            margin: 20px auto;
         }
 
-        nav a {
-            text-decoration: none;
+        nav ul li a {
             color: white;
-            font-size: 1.5rem;
+            font-size: 1.2em;
+            font-family: Arial, sans-serif;
+            text-decoration: none;
             padding: 10px 20px;
-            background-color: #4FACFE;
             border-radius: 5px;
             transition: background-color 0.3s ease;
         }
 
-        nav a:hover {
-            background-color: #003366;
+        nav ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
         }
 
-        /* JB logo styling */
+        /* Logo circle styling */
         .logo {
-            position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 225px;
-            opacity: 0; /* Start with the logo invisible */
-            animation: emerge 2s ease-out forwards; /* Animation for the logo */
-            z-index: 1; /* Ensure the logo is above the overlay */
-        }
-
-        /* Animation keyframes for the JB logo */
-        @keyframes emerge {
-            0% {
-                bottom: 20px;
-                opacity: 0;
-            }
-            100% {
-                bottom: 135px;
-                opacity: 0.9;
-            }
+            margin-top: 50px;
+            width: 80px;
+            height: 80px;
+            background-color: white;
+            color: #4FACFE;
+            font-size: 2em;
+            font-family: Arial, sans-serif;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
     </style>
 </head>
 <body>
-
-    <!-- Blurred background image -->
     <div class="background"></div>
-
-    <!-- Semi-transparent blue overlay -->
-    <div class="overlay"></div>
-
-    <h1>Jonathan Bonilla’s Portfolio</h1>
-
-    <nav>
-        <ul>
-            <li><a href="aboutme.html">About Me</a></li>
-            <li><a href="masters.html">Master’s Research</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="education.html">Education</a></li>
-            <li><a href="contact.html">Contact Me</a></li>
-        </ul>
-    </nav>
-
-    <!-- JB logo -->
-    <img src="JBlogo_white_lines-removebg-preview.png" alt="JB Logo" class="logo">
-
+    <div class="overlay">
+        <div class="content">
+            <h1>Jonathan Bonilla’s Portfolio</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">About me</a></li>
+                    <li><a href="#">Master’s Research</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Education</a></li>
+                    <li><a href="#">Contact Me</a></li>
+                </ul>
+            </nav>
+            <div class="logo">JB</div>
+        </div>
+    </div>
 </body>
 </html>
 
