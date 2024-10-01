@@ -33,18 +33,18 @@
             background-image: url('WhatsApp Image 2024-10-01 at 2.35.41 PM.jpeg'); /* Your original background image */
             background-size: cover;
             background-position: center;
-            filter: blur(10px); /* Blurs the background image */
+            filter: blur(8px); /* Blurs the background image */
             z-index: -1; /* Ensures it stays behind the content */
         }
 
-        /* Overlay to add semi-transparent color */
+        /* Overlay to add a lighter semi-transparent color */
         .overlay {
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
-            background-color: rgba(255, 255, 255, 0.7); /* White overlay with 70% opacity */
+            background-color: rgba(255, 255, 255, 0.3); /* White overlay with 30% opacity */
             z-index: 0;
         }
 
@@ -121,7 +121,7 @@
     <!-- Blurred background image -->
     <div class="background"></div>
 
-    <!-- Semi-transparent white overlay -->
+    <!-- Semi-transparent light overlay -->
     <div class="overlay"></div>
 
     <h1>Jonathan Bonilla's Portfolio</h1>
