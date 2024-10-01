@@ -16,6 +16,7 @@
             color: black; /* Set all text to black */
             position: relative;
             min-height: 100vh;
+            overflow: hidden; /* Prevent scroll during animation */
         }
 
         /* Faded background using an overlay */
@@ -51,14 +52,28 @@
             margin-top: 80px; /* Lower the navigation */
         }
 
+        /* JB logo animation */
         .logo {
             position: absolute;
-            bottom: 125px;
+            bottom: -150px; /* Start the logo off-screen */
             left: 50%;
             transform: translateX(-50%);
             width: 225px;
-            opacity: 0.9;
+            opacity: 0; /* Start with the logo invisible */
+            animation: emerge 2s ease-out forwards; /* Animation to move it up and fade in */
             z-index: 1; /* Ensure the logo is above the overlay */
+        }
+
+        /* Animation keyframes for the JB logo */
+        @keyframes emerge {
+            0% {
+                bottom: -150px;
+                opacity: 0;
+            }
+            100% {
+                bottom: 125px;
+                opacity: 0.9;
+            }
         }
     </style>
 </head>
