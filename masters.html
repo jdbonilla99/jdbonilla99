@@ -26,6 +26,9 @@
             border-bottom: 2px solid #001f3f;
             padding-bottom: 10px;
             text-align: center;
+            background: none; /* Ensure no background for the title */
+            box-shadow: none; /* Remove any box-shadow */
+            margin: 30px 0; /* Reintroduce vertical margin for spacing */
         }
         .document-link {
             display: inline-flex;
@@ -49,6 +52,9 @@
         p, li {
             font-size: 1.2rem;
             color: #FFFFFF; /* Ensure all text is white */
+            background: none; /* Ensure no background for text */
+            box-shadow: none; /* Remove any box-shadow */
+            margin: 15px 0; /* Reintroduce margin to separate paragraphs and list items */
         }
         ul {
             padding-left: 20px;
@@ -63,8 +69,8 @@
             margin: 50px 0;
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-            background: none; /* Remove background in case it's causing the issue */
+            box-shadow: none; /* Remove box-shadow */
+            background: none; /* Remove background */
         }
         .image-grid {
             display: grid;
@@ -111,7 +117,7 @@
             border: 2px solid transparent; /* Add a border around the logo */
             padding: 10px; /* Add padding inside the border */
             border-radius: 10px; /* Optional: Round the corners of the border */
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+            box-shadow: none; /* Ensure no box-shadow on logo */
         }
 
         .home-link {
@@ -139,6 +145,24 @@
         /* Color adjustment for specific headers */
         .highlight {
             color: #FFD700;
+            background-color: transparent; /* Ensure clear background */
+            box-shadow: none; /* Ensure no shadow for highlight */
+        }
+
+        /* Ensuring AOS elements are transparent */
+        [data-aos] {
+            background-color: transparent; /* Ensure AOS-animated elements have transparent backgrounds */
+        }
+
+        /* Padding adjustments for sections and key areas */
+        section, ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Add space between different sections */
+        section {
+            margin-bottom: 30px; /* Add space between the sections */
         }
     </style>
 </head>
@@ -203,3 +227,4 @@
 
 </body>
 </html>
+
