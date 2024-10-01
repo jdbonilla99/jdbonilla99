@@ -26,13 +26,14 @@
         }
 
         h1 {
-            font-size: 3rem;
+            font-size: 4rem; /* Increased the size of the title */
             color: #FFFFFF; /* Title color */
-            margin-top: 120px;
+            margin-top: 150px; /* Lowered the header */
             position: relative;
             z-index: 1;
             animation: slideInFromTop 1.5s ease-out forwards; /* Apply slide-in animation */
             opacity: 0; /* Start as invisible */
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Added shadow to the text */
         }
 
         /* Animation for the heading text */
@@ -57,10 +58,11 @@
             opacity: 0;
             animation: fadeIn 1.5s ease-out forwards;
             animation-delay: 0.5s; /* Delay to sync with the h1 animation */
+            text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.6); /* Added shadow to navigation links */
         }
 
         nav {
-            margin-top: 60px;
+            margin-top: 80px; /* Lowered the navigation */
             opacity: 0; /* Initially invisible */
             animation: fadeIn 1.5s ease-out forwards; /* Apply fade-in animation */
             animation-delay: 0.5s; /* Delay for a smooth transition */
