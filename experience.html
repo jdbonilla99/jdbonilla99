@@ -39,7 +39,7 @@
         .certificates-wrapper {
             display: flex;
             justify-content: space-between;
-            gap: 40px; /* Increased gap between certificates */
+            gap: 40px;
             flex-wrap: wrap;
         }
 
@@ -90,13 +90,13 @@
 
         .logo {
             width: 112.5px;
-            margin: 40px auto 10px auto; /* Increased margin above the logo */
+            margin: 40px auto 10px auto;
             display: block;
             background-color: transparent;
         }
 
         .home-link {
-            margin-top: 40px; /* Increased margin above buttons */
+            margin-top: 40px;
             text-align: center;
             padding-bottom: 50px;
         }
@@ -167,6 +167,12 @@
         @media (max-width: 480px) {
             h2 {
                 font-size: 1.5rem;
+            }
+
+            .certificates-item {
+                width: 95%; /* Increased width to take more space on smaller screens */
+                max-width: 100%; /* Ensure it doesn't go beyond screen */
+                padding: 15px; /* Slightly reduced padding to fit */
             }
 
             .experience-item, .certificates-item {
