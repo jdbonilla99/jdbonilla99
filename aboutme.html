@@ -6,6 +6,8 @@
     <title>About Me</title>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Montserrat:wght@400&display=swap" rel="stylesheet">
+    <!-- FontAwesome Library for Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <!-- AOS Library -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
@@ -53,24 +55,38 @@
 
         .about-content:hover {
             transform: translateY(-10px);
+        }
 
-        h2 {
+        h1 {
             font-family: 'Lora', serif;
-            font-size: 3rem;
+            font-size: 4rem; /* Increased size for the main title */
             color: #003366;
             border-bottom: 2px solid #001f3f;
             padding-bottom: 10px;
-            display: inline-block; /* Ensures underline is only under the text */
+            display: inline-block;
+        }
+
+        h2 {
+            font-family: 'Lora', serif;
+            font-size: 2rem; /* Smaller size for section titles */
+            color: #003366;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h2 i {
+            margin-right: 10px; /* Space between icon and text */
         }
 
         p {
             font-size: 1.2rem;
             color: black;
-            margin-bottom: 40px; /* Add extra space below the description */
+            margin-bottom: 40px;
         }
 
         .lists {
-            margin-top: 50px; /* Increase space above the lists */
+            margin-top: 50px;
         }
 
         .list-container {
@@ -94,7 +110,7 @@
             text-align: center;
             transition: transform 0.3s ease;
             color: #FFFFFF;
-            font-size: 1.3rem; /* Increase the font size */
+            font-size: 1.3rem;
         }
 
         ul li:hover {
@@ -114,7 +130,7 @@
             background-color: #003366;
             padding: 10px 20px;
             border-radius: 5px;
-            margin: 0 10px; /* Add margin between buttons */
+            margin: 0 10px;
             transition: all 0.3s ease;
         }
 
@@ -146,31 +162,32 @@
             <h1>About Jonathan Bonilla</h1>
             <p>I am a dedicated engineer with expertise in medical devices.<br> I have a passion for designing and developing innovative solutions in health at the intersection of technology and poverty alleviation.</p>
 
-                <!-- Education Section -->
-    <section class="education" class="education">
-        <h2 data-aos="fade-down">Education <i class="fas fa-graduation-cap"></i></h2>
-        <div class="education-item" data-aos="fade-up" data-aos-duration="1000">
-            <h3>Master of Science in Engineering Sciences (2022 - 2024)</h3>
-            <p><strong><em>Dartmouth College, Thayer School of Engineering</em></strong></p>
-            <p>Focus: Medical Devices, Human-Centered Design</p>
-        </div>
+            <!-- Education Section -->
+            <section class="education">
+                <h2 data-aos="fade-down"><i class="fas fa-graduation-cap"></i> Education</h2>
+                <div class="education-item" data-aos="fade-up" data-aos-duration="1000">
+                    <h3>Master of Science in Engineering Sciences (2022 - 2024)</h3>
+                    <p><strong><em>Dartmouth College, Thayer School of Engineering</em></strong></p>
+                    <p>Focus: Medical Devices, Human-Centered Design</p>
+                </div>
 
-        <div class="education-item" data-aos="fade-up" data-aos-duration="1400">
-            <h3>Bachelor of Engineering (2017 - 2022)</h3>
-            <p><strong><em>Dartmouth College, Thayer School of Engineering</em></strong></p>
-            <p>Focus: Bioelectronics, Biomechanics</p>
-        </div>
+                <div class="education-item" data-aos="fade-up" data-aos-duration="1400">
+                    <h3>Bachelor of Engineering (2017 - 2022)</h3>
+                    <p><strong><em>Dartmouth College, Thayer School of Engineering</em></strong></p>
+                    <p>Focus: Bioelectronics, Biomechanics</p>
+                </div>
 
-        <div class="education-item" data-aos="fade-up" data-aos-duration="1800">
-            <h3>Bachelor of Arts (2017 - 2021)</h3>
-            <p><strong><em>Dartmouth College</em></strong></p>
-            <p>Focus: Biomathematics, Engineering Sciences</p>
-        </div>
-    </section>
+                <div class="education-item" data-aos="fade-up" data-aos-duration="1800">
+                    <h3>Bachelor of Arts (2017 - 2021)</h3>
+                    <p><strong><em>Dartmouth College</em></strong></p>
+                    <p>Focus: Biomathematics, Engineering Sciences</p>
+                </div>
+            </section>
+
             <!-- Coursework Section -->
             <div class="lists">
                 <div class="list-container" data-aos="fade-up" data-aos-duration="2000">
-                    <h2>Coursework</h2>
+                    <h2><i class="fas fa-book-open"></i> Coursework</h2>
                     <ul>
                         <li>Biomedical Device Design</li>
                         <li>Medical Device Regulation</li>
@@ -180,13 +197,12 @@
                         <li>Machine Learning</li>
                         <li>Solid Mechanics</li>
                         <li>Digital Electronics</li>
-
                     </ul>
                 </div>
 
                 <!-- Technical Skills Section -->
                 <div class="list-container" data-aos="fade-up" data-aos-duration="2200">
-                    <h2>Technical Skills</h2>
+                    <h2><i class="fas fa-tools"></i> Technical Skills</h2>
                     <ul>
                         <li>3D Printing</li>
                         <li>Technical Writing</li>
@@ -195,9 +211,9 @@
                     </ul>
                 </div>
                 
-                <!-- Programming Languages and Section -->
+                <!-- Programming Languages Section -->
                 <div class="list-container" data-aos="fade-up" data-aos-duration="2800">
-                    <h2>Software & Programming Languages</h2>
+                    <h2><i class="fas fa-laptop-code"></i> Software & Programming Languages</h2>
                     <ul>
                         <li>MATLAB</li>
                         <li>C</li>
@@ -211,30 +227,27 @@
                 </div>
             </div>
 
-                <!-- Soft Skills Section -->
-                <div class="list-container" data-aos="fade-up" data-aos-duration="2400">
-                    <h2>Soft Skills</h2>
-                    <ul>
-                        <li>Teamwork</li>
-                        <li>Problem Solving</li>
-                        <li>Communication</li>
-                        <li>Adaptability</li>
-                    </ul>
-                </div>
-                
+            <!-- Soft Skills Section -->
+            <div class="list-container" data-aos="fade-up" data-aos-duration="2400">
+                <h2><i class="fas fa-users"></i> Soft Skills</h2>
+                <ul>
+                    <li>Teamwork</li>
+                    <li>Problem Solving</li>
+                    <li>Communication</li>
+                    <li>Adaptability</li>
+                </ul>
+            </div>
 
-                <!-- Languages Section -->
-                <div class="list-container" data-aos="fade-up" data-aos-duration="2600">
-                    <h2>Languages</h2>
-                    <ul>
-                        <li>Spanish (Native)</li>
-                        <li>Italian (Proficiency)</li>
-                        <li>French (Intermediate)</li>
-                        <li>Mandarin (Basic)</li>
-                    </ul>
-                </div>
-
-
+            <!-- Languages Section -->
+            <div class="list-container" data-aos="fade-up" data-aos-duration="2600">
+                <h2><i class="fas fa-language"></i> Languages</h2>
+                <ul>
+                    <li>Spanish (Native)</li>
+                    <li>Italian (Proficiency)</li>
+                    <li>French (Intermediate)</li>
+                    <li>Mandarin (Basic)</li>
+                </ul>
+            </div>
 
             <!-- JB Logo -->
             <img src="JBlogo-removebg-preview.png" alt="JB Logo" class="logo" data-aos="fade-up">
