@@ -54,8 +54,37 @@
         .about-content:hover {
             transform: translateY(-10px);
         }
+                h2 {
+            font-family: 'Lora', serif;
+            font-size: 2.5rem;
+            color: #003366;
+            border-bottom: 2px solid #001f3f;
+            padding-bottom: 10px;
+            text-align: center;
+        }
 
-        h1 {
+        .education, .courses {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 50px 0;
+        }
+
+        .education-item, .courses-item {
+            max-width: 700px;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+            transition: transform 0.3s ease;
+        }
+
+        .education-item:hover, .courses-item:hover {
+            transform: translateY(-10px);
+        }
+
+        h3 {
             font-family: 'Lora', serif;
             font-size: 3rem;
             color: #003366;
@@ -146,7 +175,28 @@
         <div class="about-content" data-aos="fade-up" data-aos-duration="2000">
             <h1>About Jonathan Bonilla</h1>
             <p>I am a dedicated engineer with expertise in medical devices.<br> I have a passion for designing and developing innovative solutions in health at the intersection of technology and poverty alleviation.</p>
-            
+
+                <!-- Education Section -->
+    <section class="education" class="education">
+        <h2 data-aos="fade-down">Education <i class="fas fa-graduation-cap"></i></h2>
+        <div class="education-item" data-aos="fade-up" data-aos-duration="1000">
+            <h3>Master of Science in Engineering Sciences (2022 - 2024)</h3>
+            <p><strong><em>Dartmouth College, Thayer School of Engineering</em></strong></p>
+            <p>Focus: Medical Devices, Human-Centered Design</p>
+        </div>
+
+        <div class="education-item" data-aos="fade-up" data-aos-duration="1400">
+            <h3>Bachelor of Engineering (2017 - 2022)</h3>
+            <p><strong><em>Dartmouth College, Thayer School of Engineering</em></strong></p>
+            <p>Focus: Bioelectronics, Biomechanics</p>
+        </div>
+
+        <div class="education-item" data-aos="fade-up" data-aos-duration="1800">
+            <h3>Bachelor of Arts (2017 - 2021)</h3>
+            <p><strong><em>Dartmouth College</em></strong></p>
+            <p>Focus: Biomathematics, Engineering Sciences</p>
+        </div>
+    </section>
             <!-- Coursework Section -->
             <div class="lists">
                 <div class="list-container" data-aos="fade-up" data-aos-duration="2000">
