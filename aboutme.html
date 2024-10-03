@@ -72,6 +72,7 @@
             border-bottom: 2px solid #001f3f;
             padding-bottom: 10px;
             display: inline-block;
+            margin-bottom: 30px; /* Added more space on laptop screens */
         }
 
         h2 {
@@ -218,7 +219,7 @@
         @media (max-width: 768px) {
             h1 {
                 font-size: 2.5rem;
-                margin-bottom: 20px; /* Added space between title and description */
+                margin-bottom: 20px;
             }
 
             h2 {
@@ -230,7 +231,7 @@
             }
 
             ul li {
-                width: 45%; /* Make items fill more space */
+                width: 45%;
             }
 
             .bachelor-degrees {
@@ -238,19 +239,23 @@
             }
 
             .bachelor-degrees .education-item {
-                max-width: 80%; /* Ensure bachelor's boxes are uniform on mobile */
+                max-width: 80%;
             }
 
-            /* Ensure Master's box is the same width as Bachelor's on mobile */
             .education-item:first-of-type {
-                max-width: 80%; /* Match Bachelor's width */
+                max-width: 80%;
+            }
+
+            /* Make degree titles smaller on phone */
+            .education-item h3 {
+                font-size: 1.3rem; /* Matching size to list items */
             }
         }
 
         @media (max-width: 480px) {
             h1 {
                 font-size: 2rem;
-                margin-bottom: 15px; /* Add space between title and description */
+                margin-bottom: 15px;
             }
 
             h2 {
@@ -262,7 +267,7 @@
             }
 
             ul li {
-                width: 100%; /* Stack the list items */
+                width: 100%;
             }
 
             .bachelor-degrees {
@@ -270,12 +275,15 @@
             }
 
             .bachelor-degrees .education-item {
-                max-width: 100%; /* Make sure bachelor's boxes are full width on mobile */
+                max-width: 100%;
             }
 
-            /* Ensure Master's box is the same width as Bachelor's on mobile */
             .education-item:first-of-type {
-                max-width: 100%; /* Full width */
+                max-width: 100%;
+            }
+
+            .education-item h3 {
+                font-size: 1.2rem; /* Matching degree title size with list item size */
             }
 
             .home-link .button {
@@ -367,7 +375,7 @@
                         <li>Regulatory Compliance</li>
                     </ul>
                 </div>
-                
+
                 <!-- Programming Languages Section -->
                 <div class="list-container" data-aos="fade-up" data-aos-duration="2800">
                     <h2>Software & Programming Languages <i class="fas fa-laptop-code"></i></h2>
@@ -424,6 +432,8 @@
 
 </body>
 </html>
+
+
 
 
 
