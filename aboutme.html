@@ -90,6 +90,7 @@
             margin-top: 50px;
         }
 
+        /* Dynamic Text Box for Degrees with Hover Effect */
         .education-item {
             background-color: #4FACFE;
             padding: 20px;
@@ -102,6 +103,7 @@
             text-align: center;
         }
 
+        /* Add dynamic hovering effect to enlarge boxes */
         .education-item:hover {
             transform: scale(1.1);
             transition: transform 0.3s ease;
@@ -223,7 +225,7 @@
             }
 
             ul li {
-                width: 45%; /* Display two items per row */
+                width: 45%;
             }
 
             .bachelor-degrees {
@@ -258,8 +260,8 @@
             }
 
             ul li {
-                width: 45%; /* Display two items per row */
-                font-size: 0.9rem; /* Smaller font size to fit more items */
+                width: 45%;
+                font-size: 0.9rem;
             }
 
             .bachelor-degrees {
@@ -275,12 +277,14 @@
             }
 
             .education-item h3 {
-                font-size: 1.1rem; /* Reduced font size for phone */
+                font-size: 1.2rem;
                 margin-bottom: 5px;
             }
 
-            .education-item p.degree-institution, .education-item p.degree-focus {
-                font-size: 1rem; /* Reduced font size for other lines */
+            .education-item h3::after {
+                content: ' ';
+                display: block;
+                margin-top: 5px;
             }
 
             .home-link .button {
@@ -323,7 +327,7 @@
             <section class="education">
                 <h2 data-aos="fade-down">Education <i class="fas fa-graduation-cap"></i></h2>
 
-                <!-- Master's Degree -->
+                <!-- Master's Degree (alone at the top) -->
                 <div class="education-item" data-aos="fade-up" data-aos-duration="1000">
                     <h3>Master of Science in Engineering Sciences <br>(2022 - 2024)</h3>
                     <p class="degree-institution"><strong><em>Dartmouth College, Thayer School of Engineering</em></strong></p>
@@ -429,7 +433,6 @@
 
 </body>
 </html>
-
 
 
 
