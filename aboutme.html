@@ -3,172 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me</title>
+    <title>Certificates & Experience</title>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Montserrat:wght@400&display=swap" rel="stylesheet">
-    <!-- FontAwesome Library for Icons -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <!-- AOS Library -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
         body {
-            font-family: 'Montserrat', sans-serif;
-            margin: 0;
-            padding: 0;
+            background: linear-gradient(135deg, #4FACFE, #003366);
             color: #000;
-        }
-
-        .about-me {
-            background-image: url('Jonathan.jpeg');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            min-height: 100vh;
-            padding: 20px;
-        }
-
-        .about-me::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
-            z-index: 1;
-        }
-
-        .about-content {
-            position: relative;
-            z-index: 2;
-            text-align: center;
-            padding: 30px 30px 60px;
-            background-color: rgba(255, 255, 255, 0.9);
-            border-radius: 10px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .about-content:hover {
-            transform: translateY(-10px);
-        }
-
-        h1 {
-            font-family: 'Lora', serif;
-            font-size: 3rem;
-            color: #003366;
-            border-bottom: 2px solid #001f3f;
-            padding-bottom: 10px;
-            display: inline-block;
-            margin-bottom: 30px;
+            font-family: 'Montserrat', sans-serif;
+            margin: 40px;
+            padding-bottom: 100px;
         }
 
         h2 {
             font-family: 'Lora', serif;
-            font-size: 2rem;
+            font-size: 2.5rem;
             color: #003366;
+            border-bottom: 2px solid #001f3f;
+            padding-bottom: 10px;
+            text-align: center;
+        }
+
+        .experience, .certificates {
             display: flex;
+            flex-direction: column;
             align-items: center;
-            justify-content: center;
+            margin: 50px 0;
         }
 
-        h2 i {
-            margin-left: 5px;
-        }
-
-        p {
-            font-size: 1.2rem;
-            color: black;
-            margin-bottom: 40px;
-        }
-
-        .education {
-            margin-top: 50px;
-        }
-
-        /* Hover effect for all education items (scaling only, no color change) */
-        .education-item {
-            background-color: #4FACFE;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-            margin: 20px auto;
-            text-align: center;
-            width: fit-content; /* Allows boxes to fit the content */
-        }
-
-        .education-item:hover {
-            transform: scale(1.05); /* Slight scale-up on hover */
-        }
-
-        .education-item h3 {
-            font-weight: bold;
-            color: black;
-            font-size: 1.4rem;
-            margin-bottom: 10px;
-        }
-
-        .education-item p.degree-institution {
-            color: #FFD700;
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-        }
-
-        .education-item p.degree-focus {
-            color: white;
-            font-size: 1.2rem;
-        }
-
-        /* Specific rules for the bachelor's degrees section */
-        .bachelor-degrees {
+        .certificates-wrapper {
             display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            gap: 5px; /* Add small margin between boxes */
-            flex-wrap: wrap; /* Allow boxes to wrap on smaller screens */
-        }
-
-        .bachelor-degrees .education-item {
-            margin: 5px; /* Margin between the bachelor boxes */
-        }
-
-        /* Lists for coursework, skills, etc. */
-        .lists {
-            margin-top: 50px;
-        }
-
-        .list-container {
-            margin-bottom: 30px;
-        }
-
-        ul {
-            list-style-type: none;
-            padding: 0;
-            display: flex;
+            justify-content: space-between;
+            gap: 40px;
             flex-wrap: wrap;
-            justify-content: space-around;
         }
 
-        ul li {
-            background-color: #4FACFE;
-            margin: 5px;
-            padding: 10px;
-            border-radius: 5px;
-            flex: 1 1 22%;
-            box-sizing: border-box;
+        .certificates-item {
+            width: 45%;
+            max-width: 600px;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
             text-align: center;
             transition: transform 0.3s ease;
-            color: #FFFFFF;
-            font-size: 1.2rem;
         }
 
-        ul li:hover {
-            transform: translateY(-5px);
+        .certificates-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .experience-item {
+            max-width: 700px;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+            transition: transform 0.3s ease;
+        }
+
+        .experience-item:hover, .certificates-item:hover {
+            transform: translateY(-10px);
+        }
+
+        a, button {
+            background-color: #003366;
+            color: #FFD700;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        a:hover, button:hover {
+            background-color: #FFD700;
+            color: #003366;
+        }
+
+        .logo {
+            width: 112.5px;
+            margin: 40px auto 10px auto;
+            display: block;
+            background-color: transparent;
         }
 
         .home-link {
@@ -193,191 +117,135 @@
             color: #003366;
         }
 
-        .logo {
-            width: 112.5px;
-            margin: 20px auto;
-            display: block;
-            border: 2px solid #ddd;
-            border-radius: 10px;
-            padding: 10px;
-            background-color: transparent;
-            transition: transform 0.3s ease;
-        }
-
-        .logo:hover {
-            transform: translateY(-5px);
-        }
-
-        /* Responsive styles */
-        @media (max-width: 768px) {
-            .bachelor-degrees {
+        /* Responsive Styles */
+        @media (max-width: 1024px) {
+            .certificates-wrapper {
                 flex-direction: column;
-                align-items: center; /* Center the boxes on smaller screens */
-            }
-
-            ul li {
-                flex: 1 1 45%; /* Two items per row on smaller screens */
-            }
-        }
-
-        @media (max-width: 480px) {
-            h1 {
-                font-size: 2rem;
-                margin-bottom: 15px;
+                align-items: center;
             }
 
             h2 {
-                font-size: 1.6rem;
+                font-size: 2rem;
             }
 
-            p, li {
-                font-size: 1rem;
+            .experience-item, .certificates-item {
+                max-width: 600px;
+                padding: 20px;
             }
 
-            ul li {
-                flex: 1 1 45%;
-                font-size: 0.9rem;
+            .home-link .button {
+                font-size: 1.3rem;
+                padding: 8px 15px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                margin: 20px;
+                padding-bottom: 60px;
             }
 
-            .education-item {
-                padding: 10px;
-                display: flex;
-                flex-direction: column;
-                justify-content: center; /* Vertically centers the content */
-                align-items: center; /* Horizontally centers the content */
+            h2 {
+                font-size: 1.8rem;
             }
 
-            .education-item h3 {
-                font-size: 1rem;
-                margin-bottom: 5px; /* Reduce space below the degree title */
-            }
-
-            .education-item p.degree-institution,
-            .education-item p.degree-focus {
-                font-size: 0.9rem;
-                margin: 3px 0; /* Balanced margins for institution and focus */
+            .experience-item, .certificates-item {
+                max-width: 90%;
+                padding: 15px;
             }
 
             .home-link .button {
                 font-size: 1.2rem;
-                padding: 7px 14px;
+                padding: 7px 10px;
             }
 
             .logo {
                 width: 90px;
             }
         }
+
+        @media (max-width: 480px) {
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .certificates-item {
+                width: 95%;
+                max-width: 100%;
+                padding: 15px;
+            }
+
+            .experience-item, .certificates-item {
+                max-width: 100%;
+                padding: 10px;
+            }
+
+            .home-link .button {
+                font-size: 1rem;
+                padding: 5px 10px;
+            }
+
+            .logo {
+                width: 75px;
+            }
+        }
     </style>
 </head>
 <body>
 
-    <section class="about-me">
-        <div class="about-content" data-aos="fade-up" data-aos-duration="2000">
-            <h1>About Jonathan Bonilla</h1>
-            <p>I am a dedicated engineer with expertise in medical devices.<br> I have a passion for designing and developing innovative solutions in health at the intersection of technology and poverty alleviation.</p>
+    <!-- Certificates Section -->
+    <section id="certificates" class="certificates">
+        <h2 data-aos="fade-down">Certificates <i class="fas fa-certificate"></i></h2>
 
-            <!-- Education Section -->
-            <section class="education">
-                <h2 data-aos="fade-down">Education <i class="fas fa-graduation-cap"></i></h2>
-
-                <!-- Master's Degree -->
-                <div class="education-item" data-aos="fade-up" data-aos-duration="1000">
-                    <h3>Master of Science in Engineering Sciences <br>(2022 - 2024)</h3>
-                    <p class="degree-institution"><strong><em>Dartmouth College, Thayer School of Engineering</em></strong></p>
-                    <p class="degree-focus">Focus: Medical Devices, Human-Centered Design</p>
-                </div>
-
-                <!-- Bachelor's Degrees -->
-                <div class="bachelor-degrees">
-                    <div class="education-item" data-aos="fade-up" data-aos-duration="1400">
-                        <h3>Bachelor of Engineering <br>(2017 - 2022)</h3>
-                        <p class="degree-institution"><strong><em>Dartmouth College, Thayer School of Engineering</em></strong></p>
-                        <p class="degree-focus">Focus: Bioelectronics, Biomechanics</p>
-                    </div>
-
-                    <div class="education-item" data-aos="fade-up" data-aos-duration="1800">
-                        <h3>Bachelor of Arts <br>(2017 - 2021)</h3>
-                        <p class="degree-institution"><strong><em>Dartmouth College</em></strong></p>
-                        <p class="degree-focus">Focus: Biomathematics, Engineering Sciences</p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Coursework Section -->
-            <div class="lists">
-                <div class="list-container" data-aos="fade-up" data-aos-duration="2000">
-                    <h2>Coursework <i class="fas fa-book-open"></i></h2>
-                    <ul>
-                        <li>Biomedical Device Design</li>
-                        <li>Medical Device Regulation</li>
-                        <li>Biomaterials</li>
-                        <li>Bioelectronics</li>
-                        <li>Molecular Biology</li>
-                        <li>Machine Learning</li>
-                        <li>Solid Mechanics</li>
-                        <li>Digital Electronics</li>
-                    </ul>
-                </div>
-
-                <!-- Technical Skills Section -->
-                <div class="list-container" data-aos="fade-up" data-aos-duration="2200">
-                    <h2>Technical Skills <i class="fas fa-tools"></i></h2>
-                    <ul>
-                        <li>3D Printing</li>
-                        <li>Data Analysis</li>
-                        <li>Technical Writing</li>
-                        <li>Regulatory Compliance</li>
-                    </ul>
-                </div>
-
-                <!-- Programming Languages Section -->
-                <div class="list-container" data-aos="fade-up" data-aos-duration="2800">
-                    <h2>Software & Programming Languages <i class="fas fa-laptop-code"></i></h2>
-                    <ul>
-                        <li>MATLAB</li>
-                        <li>C</li>
-                        <li>SolidWorks</li>
-                        <li>Arduino</li>
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>Python</li>
-                        <li>MiniTab</li>
-                    </ul>
-                </div>
-
-                <!-- Soft Skills Section -->
-                <div class="list-container" data-aos="fade-up" data-aos-duration="2400">
-                    <h2>Soft Skills <i class="fas fa-users"></i></h2>
-                    <ul>
-                        <li>Teamwork</li>
-                        <li>Problem Solving</li>
-                        <li>Communication</li>
-                        <li>Adaptability</li>
-                    </ul>
-                </div>
-
-                <!-- Languages Section -->
-                <div class="list-container" data-aos="fade-up" data-aos-duration="2600">
-                    <h2>Languages <i class="fas fa-language"></i> </h2>
-                    <ul>
-                        <li>Spanish (Native)</li>
-                        <li>Italian (Proficiency)</li>
-                        <li>French (Intermediate)</li>
-                        <li>Mandarin (Basic)</li>
-                    </ul>
-                </div>
+        <div class="certificates-wrapper">
+            <div class="certificates-item" data-aos="fade-up" data-aos-duration="1000">
+                <h3>Mission Concept Academy Summer 2020 Certificate</h3>
+                <p>Issued by: NASA L'SPACE</p>
+                <img src="WhatsApp Image 2024-10-02 at 6.13.42 PM.jpeg" alt="MCA Summer 2020 Certificate">
             </div>
 
-            <!-- JB Logo -->
-            <img src="JBlogo-removebg-preview.png" alt="JB Logo" class="logo" data-aos="fade-up">
-
-            <!-- Home and Next Links -->
-            <div class="home-link" data-aos="fade-up" data-aos-duration="2200">
-                <a href="index.html" class="button">Home</a>
-                <a href="masters.html" class="button">Next</a>
+            <div class="certificates-item" data-aos="fade-up" data-aos-duration="1400">
+                <h3>NASA Proposal Writing and Evaluation Experience Fall 2020 Certificate of Participation</h3>
+                <p>Issued by: NASA L'SPACE</p>
+                <img src="WhatsApp Image 2024-10-02 at 6.13.41 PM.jpeg" alt="NPWEE Fall 2020 Certificate">
             </div>
         </div>
     </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <h2 data-aos="fade-down">Experience <i class="fas fa-briefcase"></i></h2>
+
+        <div class="experience-item" data-aos="fade-up" data-aos-duration="1000">
+            <h3>Baker Lab, Dartmouth College</h3>
+            <p><strong>Graduate Engineering Researcher, Cryogenic Alloy Wear Testing</strong></p>
+            <ul>
+                <li>Analyzed the wear properties of new alloys at room and cryogenic temperatures.</li>
+                <li>Achieved 22% and 17% improvement over stainless steel for space and medical applications.</li>
+                <li>Optimized pin-holder design, improving performance by 6% using statistical analysis software.</li>
+                <li>Adapted wear tester for extremely low temperatures, eliminating external factors.</li>
+            </ul>
+        </div>
+
+        <div class="experience-item" data-aos="fade-up" data-aos-duration="1400">
+            <h3>Analog Lab, Dartmouth College</h3>
+            <p><strong>Student Researcher, Asthma Symptom Monitoring</strong></p>
+            <ul>
+                <li>Developed a wearable device that detects and tracks cough, wheezing, lung function, and inhaler use.</li>
+                <li>Collected, analyzed, and interpreted data, achieving 99.2% accuracy for asthma control monitoring.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- JB Logo -->
+    <img src="JBlogo-removebg-preview.png" alt="JB Logo" class="logo" data-aos="fade-up">
+
+    <!-- Navigation Links (Back, Home, Next) -->
+    <div class="home-link" data-aos="fade-up">
+        <a href="projects.html" class="button">Back</a> <!-- Back to projects.html -->
+        <a href="index.html" class="button">Home</a> <!-- Home button -->
+        <a href="contact.html" class="button">Next</a> <!-- Next to contact.html -->
+    </div>
 
     <!-- AOS Script Initialization -->
     <script>
