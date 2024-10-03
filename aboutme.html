@@ -112,12 +112,19 @@
             justify-content: center;
             align-items: flex-start;
             margin-top: 20px;
-            gap: 10px;
+            gap: 5px; /* Reduced gap between bachelor boxes */
+            flex-wrap: wrap; /* Enable wrapping */
         }
 
         .bachelor-degrees .education-item {
             flex-grow: 1;
-            max-width: 35%;
+            max-width: 45%; /* Adjust max-width to bring them closer together */
+            transition: transform 0.3s ease;
+            margin: 5px; /* Add margin between items */
+        }
+
+        .bachelor-degrees .education-item:hover {
+            transform: scale(1.1); /* Enlarge box smoothly on hover */
         }
 
         .education-item h3 {
@@ -146,7 +153,6 @@
             margin-bottom: 30px;
         }
 
-        /* Use flexbox for lists */
         ul {
             list-style-type: none;
             padding: 0;
@@ -160,7 +166,7 @@
             margin: 5px;
             padding: 10px;
             border-radius: 5px;
-            flex: 1 1 22%; /* Four items per row on larger screens */
+            flex: 1 1 22%;
             box-sizing: border-box;
             text-align: center;
             transition: transform 0.3s ease;
