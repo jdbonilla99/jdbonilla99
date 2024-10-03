@@ -87,39 +87,41 @@
         }
 
         .education {
-            margin-top: 20px;
+            margin-top: 50px;
         }
 
+        /* Hover effect for all education items (scaling only, no color change) */
         .education-item {
             background-color: #4FACFE;
-            padding: 10px;
+            padding: 20px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
-            margin: 10px auto;
+            margin: 20px auto;
             text-align: center;
-            width: fit-content;
+            width: fit-content; /* Allows boxes to fit the content */
         }
 
         .education-item:hover {
-            transform: scale(1.05);
+            transform: scale(1.05); /* Slight scale-up on hover */
         }
 
         .education-item h3 {
             font-weight: bold;
             color: black;
-            font-size: 1.2rem;
-            margin-bottom: 5px;
-        }
-
-        .education-item p.degree-institution, 
-        .education-item p.degree-focus {
-            font-size: 1rem;
+            font-size: 1.4rem;
+            margin-bottom: 10px;
         }
 
         .education-item p.degree-institution {
             color: #FFD700;
-            margin-bottom: 5px;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .education-item p.degree-focus {
+            color: white;
+            font-size: 1.2rem;
         }
 
         /* Specific rules for the bachelor's degrees section */
@@ -127,12 +129,12 @@
             display: flex;
             justify-content: center;
             align-items: flex-start;
-            gap: 5px;
-            flex-wrap: wrap;
+            gap: 5px; /* Add small margin between boxes */
+            flex-wrap: wrap; /* Allow boxes to wrap on smaller screens */
         }
 
         .bachelor-degrees .education-item {
-            margin: 5px;
+            margin: 5px; /* Margin between the bachelor boxes */
         }
 
         /* Lists for coursework, skills, etc. */
@@ -210,39 +212,53 @@
         @media (max-width: 768px) {
             .bachelor-degrees {
                 flex-direction: column;
-                align-items: center;
+                align-items: center; /* Center the boxes on smaller screens */
             }
 
             ul li {
-                flex: 1 1 45%;
+                flex: 1 1 45%; /* Two items per row on smaller screens */
             }
         }
 
         @media (max-width: 480px) {
             h1 {
                 font-size: 2rem;
-                margin-bottom: 10px;
+                margin-bottom: 15px;
             }
 
-            .education {
-                margin-top: 10px;
+            h2 {
+                font-size: 1.6rem;
             }
 
-            .education-item {
-                padding: 5px;
-                margin: 3px;
-                max-height: 100px; /* Limit the height */
+            p, li {
+                font-size: 1rem;
+            }
+
+            ul li {
+                flex: 1 1 45%;
+                font-size: 0.9rem;
             }
 
             .education-item h3 {
                 font-size: 1rem;
-                margin-bottom: 3px;
+                margin-bottom: 5px;
             }
 
-            .education-item p.degree-institution, 
+            .education-item p.degree-institution {
+                font-size: 0.9rem;
+            }
+
             .education-item p.degree-focus {
                 font-size: 0.9rem;
-                margin-bottom: 3px;
+            }
+
+            .home-link .button {
+                font-size: 1.2rem;
+                padding: 7px 14px;
+            }
+
+            .logo {
+                width: 90px;
             }
         }
     </style>
@@ -364,4 +380,3 @@
 
 </body>
 </html>
-
