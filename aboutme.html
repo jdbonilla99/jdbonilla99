@@ -112,13 +112,15 @@
         /* Flexbox for bachelor's degrees */
         .bachelor-degrees {
             display: flex;
-            justify-content: space-around;
+            justify-content: center; /* Center the boxes */
             align-items: flex-start;
             margin-top: 20px;
+            gap: 10px; /* Add minimal gap between the two boxes */
         }
 
         .bachelor-degrees .education-item {
-            margin: 0 5px; /* Add spacing between the two boxes */
+            flex-grow: 1; /* Ensure the boxes grow only as needed */
+            max-width: 45%; /* Prevent them from stretching too wide */
         }
 
         /* First line (degree) */
@@ -329,5 +331,4 @@
 
 </body>
 </html>
-
 
