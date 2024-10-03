@@ -240,6 +240,11 @@
             .bachelor-degrees .education-item {
                 max-width: 80%; /* Ensure bachelor's boxes are uniform on mobile */
             }
+
+            /* Ensure Master's box is the same width as Bachelor's on mobile */
+            .education-item:first-of-type {
+                max-width: 80%; /* Match Bachelor's width */
+            }
         }
 
         @media (max-width: 480px) {
@@ -266,6 +271,11 @@
 
             .bachelor-degrees .education-item {
                 max-width: 100%; /* Make sure bachelor's boxes are full width on mobile */
+            }
+
+            /* Ensure Master's box is the same width as Bachelor's on mobile */
+            .education-item:first-of-type {
+                max-width: 100%; /* Full width */
             }
 
             .home-link .button {
