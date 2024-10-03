@@ -160,7 +160,7 @@
             margin: 5px;
             padding: 10px;
             border-radius: 5px;
-            flex: 1 1 40%;
+            flex: 1 1 22%; /* Four items per row on larger screens */
             box-sizing: border-box;
             text-align: center;
             transition: transform 0.3s ease;
@@ -210,6 +210,12 @@
         }
 
         /* Responsive Styles */
+        @media (max-width: 1024px) {
+            ul li {
+                flex: 1 1 30%; /* Three items per row on smaller laptops */
+            }
+        }
+
         @media (max-width: 768px) {
             h1 {
                 font-size: 2.5rem;
@@ -441,6 +447,5 @@
 
 </body>
 </html>
-
 
 
