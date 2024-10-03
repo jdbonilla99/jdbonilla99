@@ -160,7 +160,7 @@
             margin: 5px;
             padding: 10px;
             border-radius: 5px;
-            flex: 1 1 40%; /* Makes sure two items fit per row */
+            flex: 1 1 40%;
             box-sizing: border-box;
             text-align: center;
             transition: transform 0.3s ease;
@@ -277,8 +277,16 @@
             }
 
             .education-item h3 {
-                font-size: 1.2rem;
+                font-size: 1rem; /* Reduced font size for degree title */
                 margin-bottom: 5px;
+            }
+
+            .education-item p.degree-institution {
+                font-size: 0.9rem; /* Reduced font size for institution */
+            }
+
+            .education-item p.degree-focus {
+                font-size: 0.9rem; /* Reduced font size for focus */
             }
 
             .education-item h3::after {
@@ -433,7 +441,6 @@
 
 </body>
 </html>
-
 
 
 
