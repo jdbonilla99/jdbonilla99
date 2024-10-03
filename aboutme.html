@@ -87,10 +87,9 @@
         }
 
         .education {
-            margin-top: 50px;
+            margin-top: 20px; /* Reduced the top margin for the education section */
         }
 
-        /* Hover effect for all education items (scaling only, no color change) */
         .education-item {
             background-color: #4FACFE;
             padding: 10px; /* Reduced padding */
@@ -128,8 +127,8 @@
             display: flex;
             justify-content: center;
             align-items: flex-start;
-            gap: 5px; /* Add small margin between boxes */
-            flex-wrap: wrap; /* Allow boxes to wrap on smaller screens */
+            gap: 5px; /* Small margin between boxes */
+            flex-wrap: wrap;
         }
 
         .bachelor-degrees .education-item {
@@ -222,42 +221,27 @@
         @media (max-width: 480px) {
             h1 {
                 font-size: 2rem;
-                margin-bottom: 15px;
+                margin-bottom: 10px; /* Reduced margin */
             }
 
-            h2 {
-                font-size: 1.6rem;
-            }
-
-            p, li {
-                font-size: 1rem;
-            }
-
-            ul li {
-                flex: 1 1 45%;
-                font-size: 0.9rem;
+            .education {
+                margin-top: 10px; /* Further reduced the margin for the education section */
             }
 
             .education-item h3 {
-                font-size: 1rem; /* Further reduced font size for smaller screens */
-                margin-bottom: 5px;
+                font-size: 1rem; /* Adjusted font size for smaller screens */
+                margin-bottom: 3px;
             }
 
-            .education-item p.degree-institution {
-                font-size: 0.9rem; /* Further reduced font size */
-            }
-
+            .education-item p.degree-institution, 
             .education-item p.degree-focus {
-                font-size: 0.9rem;
+                font-size: 0.9rem; /* Further reduced font size */
+                margin-bottom: 3px; /* Reduced margin */
             }
 
-            .home-link .button {
-                font-size: 1.2rem;
-                padding: 7px 14px;
-            }
-
-            .logo {
-                width: 90px;
+            .education-item {
+                padding: 5px; /* Reduced padding on small screens */
+                margin: 3px; /* Reduced margins on small screens */
             }
         }
     </style>
@@ -379,6 +363,4 @@
 
 </body>
 </html>
-
-
 
