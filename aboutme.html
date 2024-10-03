@@ -12,6 +12,13 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <style>
+        /* Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             font-family: 'Montserrat', sans-serif;
             margin: 0;
@@ -21,14 +28,15 @@
 
         .about-me {
             background-image: url('Jonathan.jpeg'); /* Path to the image */
-            background-size: cover; /* Adjusted background size to fit screen */
+            background-size: cover;
             background-position: center;
             display: flex;
             justify-content: center;
             align-items: center;
             color: black;
             position: relative;
-            min-height: 100vh; /* Reduced to 100vh to fit the screen */
+            min-height: 100vh; 
+            padding: 20px; /* Padding for smaller screens */
         }
 
         .about-me::before {
@@ -38,7 +46,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.7); /* Darken background more */
+            background-color: rgba(0, 0, 0, 0.7);
             z-index: 1;
         }
 
@@ -46,10 +54,10 @@
             position: relative;
             z-index: 2;
             text-align: center;
-            padding: 30px 30px 60px; /* Increase bottom padding */
-            background-color: rgba(255, 255, 255, 0.9); /* White box background */
+            padding: 30px 30px 60px;
+            background-color: rgba(255, 255, 255, 0.9);
             border-radius: 10px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Soft shadow */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
         }
 
@@ -59,7 +67,7 @@
 
         h1 {
             font-family: 'Lora', serif;
-            font-size: 3rem; /* Increased size for the main title */
+            font-size: 3rem;
             color: #003366;
             border-bottom: 2px solid #001f3f;
             padding-bottom: 10px;
@@ -68,16 +76,15 @@
 
         h2 {
             font-family: 'Lora', serif;
-            font-size: 2rem; /* Smaller size for section titles */
+            font-size: 2rem;
             color: #003366;
             display: flex;
             align-items: center;
             justify-content: center;
         }
 
-        /* Add one space between icon and text */
         h2 i {
-            margin-left: 5px; /* Space between icon and text */
+            margin-left: 5px;
         }
 
         p {
@@ -90,59 +97,52 @@
             margin-top: 50px;
         }
 
-        /* Dynamic Text Box for Degrees */
         .education-item {
             background-color: #4FACFE;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease; /* Added transition for hover effect */
-            display: block; /* Ensure boxes stack vertically */
-            margin: 20px auto; /* Center the box and add vertical margin */
-            width: fit-content; /* Dynamically size the box to fit the content */
-            max-width: 80%; /* Ensure the box doesn't exceed 80% of the container */
+            transition: transform 0.3s ease;
+            margin: 20px auto;
+            width: fit-content;
+            max-width: 80%;
             text-align: center;
         }
 
-        /* Add scaling effect on hover */
         .education-item:hover {
-            transform: scale(1.1); /* Slightly increase the size on hover */
-            transition: transform 0.3s ease; /* Smooth transition */
+            transform: scale(1.1);
+            transition: transform 0.3s ease;
         }
 
-        /* Flexbox for bachelor's degrees */
         .bachelor-degrees {
             display: flex;
-            justify-content: center; /* Center the boxes */
+            justify-content: center;
             align-items: flex-start;
             margin-top: 20px;
-            gap: 10px; /* Add minimal gap between the two boxes */
+            gap: 10px;
         }
 
         .bachelor-degrees .education-item {
-            flex-grow: 1; /* Ensure the boxes grow only as needed */
-            max-width: 35%; /* Reduce the width to make the boxes smaller */
+            flex-grow: 1;
+            max-width: 35%;
         }
 
-        /* First line (degree) */
         .education-item h3 {
             font-weight: bold;
             color: black;
-            font-size: 1.4rem; /* Larger size for degree title */
-            margin-bottom: 10px; /* Equal spacing between lines */
+            font-size: 1.4rem;
+            margin-bottom: 10px;
         }
 
-        /* Second line (institution) */
         .education-item p.degree-institution {
             color: #FFD700;
-            font-size: 1.2rem; /* Set to 1.2rem */
-            margin-bottom: 10px; /* Equal spacing between lines */
+            font-size: 1.2rem;
+            margin-bottom: 10px;
         }
 
-        /* Third line (focus) */
         .education-item p.degree-focus {
             color: white;
-            font-size: 1.2rem; /* Set to 1.2rem */
+            font-size: 1.2rem;
         }
 
         .lists {
@@ -162,11 +162,11 @@
         }
 
         ul li {
-            background-color: #4FACFE; /* Muted blue-gray background */
+            background-color: #4FACFE;
             margin: 10px;
             padding: 10px;
             border-radius: 5px;
-            width: 22%; /* Reduced width to fit more per row */
+            width: 22%;
             text-align: center;
             transition: transform 0.3s ease;
             color: #FFFFFF;
@@ -212,6 +212,86 @@
 
         .logo:hover {
             transform: translateY(-5px);
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            p, li {
+                font-size: 1.1rem;
+            }
+
+            ul li {
+                width: 45%; /* Make items fill more space */
+            }
+
+            .bachelor-degrees {
+                flex-wrap: wrap;
+            }
+
+            .bachelor-degrees .education-item {
+                max-width: 80%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.6rem;
+            }
+
+            p, li {
+                font-size: 1rem;
+            }
+
+            ul li {
+                width: 100%; /* Stack the list items */
+            }
+
+            .bachelor-degrees {
+                flex-direction: column;
+            }
+
+            .bachelor-degrees .education-item {
+                max-width: 100%;
+            }
+
+            .home-link .button {
+                font-size: 1.2rem;
+                padding: 7px 14px;
+            }
+
+            .logo {
+                width: 90px;
+            }
+        }
+
+        @media (max-width: 320px) {
+            p, li {
+                font-size: 0.9rem;
+            }
+
+            h2 {
+                font-size: 1.4rem;
+            }
+
+            .home-link .button {
+                font-size: 0.9rem;
+            }
+
+            .logo {
+                width: 75px;
+            }
         }
     </style>
 </head>
@@ -332,5 +412,6 @@
 
 </body>
 </html>
+
 
 
