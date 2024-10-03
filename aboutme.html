@@ -97,8 +97,9 @@
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
-            display: inline-block; /* Changed to inline-block for dynamic sizing */
+            display: block; /* Ensure boxes stack vertically */
             margin: 20px auto; /* Center the box and add vertical margin */
+            width: fit-content; /* Dynamically size the box to fit the content */
             max-width: 80%; /* Ensure the box doesn't exceed 80% of the container */
             text-align: center;
         }
@@ -111,7 +112,7 @@
         .education-item h3 {
             font-weight: bold;
             color: black;
-            font-size: 1.3rem; /* Larger size for degree title */
+            font-size: 1.5rem; /* Larger size for degree title */
             margin-bottom: 10px; /* Equal spacing between lines */
         }
 
