@@ -223,7 +223,7 @@
             }
 
             ul li {
-                width: 45%;
+                width: 45%; /* Display two items per row */
             }
 
             .bachelor-degrees {
@@ -258,8 +258,8 @@
             }
 
             ul li {
-                width: 45%;
-                font-size: 0.9rem;
+                width: 45%; /* Display two items per row */
+                font-size: 0.9rem; /* Smaller font size to fit more items */
             }
 
             .bachelor-degrees {
@@ -267,6 +267,10 @@
             }
 
             .bachelor-degrees .education-item {
+                max-width: 100%;
+            }
+
+            .education-item:first-of-type {
                 max-width: 100%;
             }
 
@@ -279,7 +283,7 @@
             .education-item h3::after {
                 content: ' ';
                 display: block;
-                margin-top: 5px;
+                margin-top: 5px; /* Small space between title and date */
             }
 
             .home-link .button {
@@ -322,14 +326,14 @@
             <section class="education">
                 <h2 data-aos="fade-down">Education <i class="fas fa-graduation-cap"></i></h2>
 
-                <!-- Master's Degree -->
+                <!-- Master's Degree (alone at the top) -->
                 <div class="education-item" data-aos="fade-up" data-aos-duration="1000">
                     <h3>Master of Science in Engineering Sciences <br>(2022 - 2024)</h3>
                     <p class="degree-institution"><strong><em>Dartmouth College, Thayer School of Engineering</em></strong></p>
                     <p class="degree-focus">Focus: Medical Devices, Human-Centered Design</p>
                 </div>
 
-                <!-- Bachelor's Degrees -->
+                <!-- Flexbox for Bachelor's Degrees -->
                 <div class="bachelor-degrees">
                     <div class="education-item" data-aos="fade-up" data-aos-duration="1400">
                         <h3>Bachelor of Engineering <br>(2017 - 2022)</h3>
@@ -428,7 +432,6 @@
 
 </body>
 </html>
-
 
 
 
