@@ -90,7 +90,7 @@
             margin-top: 50px;
         }
 
-        /* Apply hover effect to all education items (including master's and bachelor's boxes) */
+        /* Hover effect for all education items (scaling only, no color change) */
         .education-item {
             background-color: #4FACFE;
             padding: 20px;
@@ -98,26 +98,12 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
             margin: 20px auto;
-            max-width: 80%;
             text-align: center;
-            width: auto; /* Ensures box fits content */
+            width: fit-content; /* Allows boxes to fit the content */
         }
 
         .education-item:hover {
-            transform: scale(1.05); /* Slightly scale up on hover */
-        }
-
-        /* Specific rules for the bachelor's degrees section */
-        .bachelor-degrees {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 5px; /* Space between the boxes */
-        }
-
-        .bachelor-degrees .education-item {
-            flex: 1 1 45%; /* Allows the boxes to grow and shrink based on content */
-            margin: 5px; /* Small space between the boxes */
+            transform: scale(1.05); /* Slight scale-up on hover */
         }
 
         .education-item h3 {
@@ -138,6 +124,20 @@
             font-size: 1.2rem;
         }
 
+        /* Specific rules for the bachelor's degrees section */
+        .bachelor-degrees {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 5px; /* Add small margin between boxes */
+            flex-wrap: wrap; /* Allow boxes to wrap on smaller screens */
+        }
+
+        .bachelor-degrees .education-item {
+            margin: 5px; /* Margin between the bachelor boxes */
+        }
+
+        /* Lists for coursework, skills, etc. */
         .lists {
             margin-top: 50px;
         }
@@ -208,10 +208,15 @@
             transform: translateY(-5px);
         }
 
-        /* Responsive Styles */
+        /* Responsive styles */
         @media (max-width: 768px) {
-            .bachelor-degrees .education-item {
-                flex: 1 1 100%; /* Stack the bachelor's degree boxes */
+            .bachelor-degrees {
+                flex-direction: column;
+                align-items: center; /* Center the boxes on smaller screens */
+            }
+
+            ul li {
+                flex: 1 1 45%; /* Two items per row on smaller screens */
             }
         }
 
@@ -230,7 +235,7 @@
             }
 
             ul li {
-                flex: 1 1 45%; /* Two items per row on smaller screens */
+                flex: 1 1 45%;
                 font-size: 0.9rem;
             }
 
@@ -269,14 +274,14 @@
             <section class="education">
                 <h2 data-aos="fade-down">Education <i class="fas fa-graduation-cap"></i></h2>
 
-                <!-- Master's Degree (now has hover effect) -->
+                <!-- Master's Degree -->
                 <div class="education-item" data-aos="fade-up" data-aos-duration="1000">
                     <h3>Master of Science in Engineering Sciences <br>(2022 - 2024)</h3>
                     <p class="degree-institution"><strong><em>Dartmouth College, Thayer School of Engineering</em></strong></p>
                     <p class="degree-focus">Focus: Medical Devices, Human-Centered Design</p>
                 </div>
 
-                <!-- Flexbox for Bachelor's Degrees -->
+                <!-- Bachelor's Degrees -->
                 <div class="bachelor-degrees">
                     <div class="education-item" data-aos="fade-up" data-aos-duration="1400">
                         <h3>Bachelor of Engineering <br>(2017 - 2022)</h3>
@@ -333,28 +338,28 @@
                         <li>MiniTab</li>
                     </ul>
                 </div>
-            </div>
 
-            <!-- Soft Skills Section -->
-            <div class="list-container" data-aos="fade-up" data-aos-duration="2400">
-                <h2>Soft Skills <i class="fas fa-users"></i></h2>
-                <ul>
-                    <li>Teamwork</li>
-                    <li>Problem Solving</li>
-                    <li>Communication</li>
-                    <li>Adaptability</li>
-                </ul>
-            </div>
+                <!-- Soft Skills Section -->
+                <div class="list-container" data-aos="fade-up" data-aos-duration="2400">
+                    <h2>Soft Skills <i class="fas fa-users"></i></h2>
+                    <ul>
+                        <li>Teamwork</li>
+                        <li>Problem Solving</li>
+                        <li>Communication</li>
+                        <li>Adaptability</li>
+                    </ul>
+                </div>
 
-            <!-- Languages Section -->
-            <div class="list-container" data-aos="fade-up" data-aos-duration="2600">
-                <h2>Languages <i class="fas fa-language"></i> </h2>
-                <ul>
-                    <li>Spanish (Native)</li>
-                    <li>Italian (Proficiency)</li>
-                    <li>French (Intermediate)</li>
-                    <li>Mandarin (Basic)</li>
-                </ul>
+                <!-- Languages Section -->
+                <div class="list-container" data-aos="fade-up" data-aos-duration="2600">
+                    <h2>Languages <i class="fas fa-language"></i> </h2>
+                    <ul>
+                        <li>Spanish (Native)</li>
+                        <li>Italian (Proficiency)</li>
+                        <li>French (Intermediate)</li>
+                        <li>Mandarin (Basic)</li>
+                    </ul>
+                </div>
             </div>
 
             <!-- JB Logo -->
@@ -375,6 +380,7 @@
 
 </body>
 </html>
+
 
 
 
