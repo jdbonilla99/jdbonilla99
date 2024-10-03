@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -97,20 +96,33 @@
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
-            display: inline-block; /* Allows the box to size based on content */
-            max-width: 80%; /* Prevents it from becoming too wide */
+            display: block;
             margin-bottom: 20px;
             color: white;
             text-align: left; /* Align text to the left */
+            width: 80%; /* Adjust width based on content */
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .education-item:hover {
             transform: scale(1.05); /* Dynamic scaling effect on hover */
         }
 
-        .education-item h3,
-        .education-item p {
-            margin: 0;
+        /* First line (degree) */
+        .education-item h3 {
+            font-weight: bold;
+            color: #FFD700;
+        }
+
+        /* Second line (institution) */
+        .education-item p.degree-institution {
+            color: black;
+        }
+
+        /* Third line (focus) */
+        .education-item p.degree-focus {
+            color: white;
         }
 
         .lists {
@@ -196,20 +208,20 @@
 
                 <div class="education-item" data-aos="fade-up" data-aos-duration="1000">
                     <h3>Master of Science in Engineering Sciences (2022 - 2024)</h3>
-                    <p><strong><em>Dartmouth College, Thayer School of Engineering</em></strong></p>
-                    <p>Focus: Medical Devices, Human-Centered Design</p>
+                    <p class="degree-institution"><strong><em>Dartmouth College, Thayer School of Engineering</em></strong></p>
+                    <p class="degree-focus">Focus: Medical Devices, Human-Centered Design</p>
                 </div>
 
                 <div class="education-item" data-aos="fade-up" data-aos-duration="1400">
                     <h3>Bachelor of Engineering (2017 - 2022)</h3>
-                    <p><strong><em>Dartmouth College, Thayer School of Engineering</em></strong></p>
-                    <p>Focus: Bioelectronics, Biomechanics</p>
+                    <p class="degree-institution"><strong><em>Dartmouth College, Thayer School of Engineering</em></strong></p>
+                    <p class="degree-focus">Focus: Bioelectronics, Biomechanics</p>
                 </div>
 
                 <div class="education-item" data-aos="fade-up" data-aos-duration="1800">
                     <h3>Bachelor of Arts (2017 - 2021)</h3>
-                    <p><strong><em>Dartmouth College</em></strong></p>
-                    <p>Focus: Biomathematics, Engineering Sciences</p>
+                    <p class="degree-institution"><strong><em>Dartmouth College</em></strong></p>
+                    <p class="degree-focus">Focus: Biomathematics, Engineering Sciences</p>
                 </div>
             </section>
 
@@ -246,9 +258,7 @@
                     <ul>
                         <li>MATLAB</li>
                         <li>C</li>
-                        <
-
-li>SolidWorks</li>
+                        <li>SolidWorks</li>
                         <li>Arduino</li>
                         <li>HTML</li>
                         <li>CSS</li>
