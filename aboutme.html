@@ -87,34 +87,34 @@
         }
 
         .education {
-            margin-top: 20px; /* Reduced the top margin for the education section */
+            margin-top: 20px;
         }
 
         .education-item {
             background-color: #4FACFE;
-            padding: 10px; /* Reduced padding */
+            padding: 10px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
-            margin: 10px auto; /* Reduced margin */
+            margin: 10px auto;
             text-align: center;
-            width: fit-content; /* Allows boxes to fit the content */
+            width: fit-content;
         }
 
         .education-item:hover {
-            transform: scale(1.05); /* Slight scale-up on hover */
+            transform: scale(1.05);
         }
 
         .education-item h3 {
             font-weight: bold;
             color: black;
-            font-size: 1.2rem; /* Reduced font size */
-            margin-bottom: 5px; /* Reduced margin */
+            font-size: 1.2rem;
+            margin-bottom: 5px;
         }
 
         .education-item p.degree-institution, 
         .education-item p.degree-focus {
-            font-size: 1rem; /* Reduced font size */
+            font-size: 1rem;
         }
 
         .education-item p.degree-institution {
@@ -127,12 +127,12 @@
             display: flex;
             justify-content: center;
             align-items: flex-start;
-            gap: 5px; /* Small margin between boxes */
+            gap: 5px;
             flex-wrap: wrap;
         }
 
         .bachelor-degrees .education-item {
-            margin: 5px; /* Margin between the bachelor boxes */
+            margin: 5px;
         }
 
         /* Lists for coursework, skills, etc. */
@@ -210,38 +210,39 @@
         @media (max-width: 768px) {
             .bachelor-degrees {
                 flex-direction: column;
-                align-items: center; /* Center the boxes on smaller screens */
+                align-items: center;
             }
 
             ul li {
-                flex: 1 1 45%; /* Two items per row on smaller screens */
+                flex: 1 1 45%;
             }
         }
 
         @media (max-width: 480px) {
             h1 {
                 font-size: 2rem;
-                margin-bottom: 10px; /* Reduced margin */
+                margin-bottom: 10px;
             }
 
             .education {
-                margin-top: 10px; /* Further reduced the margin for the education section */
+                margin-top: 10px;
+            }
+
+            .education-item {
+                padding: 5px;
+                margin: 3px;
+                max-height: 100px; /* Limit the height */
             }
 
             .education-item h3 {
-                font-size: 1rem; /* Adjusted font size for smaller screens */
+                font-size: 1rem;
                 margin-bottom: 3px;
             }
 
             .education-item p.degree-institution, 
             .education-item p.degree-focus {
-                font-size: 0.9rem; /* Further reduced font size */
-                margin-bottom: 3px; /* Reduced margin */
-            }
-
-            .education-item {
-                padding: 5px; /* Reduced padding on small screens */
-                margin: 3px; /* Reduced margins on small screens */
+                font-size: 0.9rem;
+                margin-bottom: 3px;
             }
         }
     </style>
