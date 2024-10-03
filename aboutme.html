@@ -109,11 +109,23 @@
             transform: scale(1.05); /* Increase size slightly on hover */
         }
 
+        /* Flexbox for bachelor's degrees */
+        .bachelor-degrees {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            margin-top: 20px;
+        }
+
+        .bachelor-degrees .education-item {
+            margin: 0 20px; /* Add spacing between the two boxes */
+        }
+
         /* First line (degree) */
         .education-item h3 {
             font-weight: bold;
             color: black;
-            font-size: 1.4rem; /* Larger size for degree title */
+            font-size: 1.5rem; /* Larger size for degree title */
             margin-bottom: 10px; /* Equal spacing between lines */
         }
 
@@ -211,22 +223,26 @@
             <section class="education">
                 <h2 data-aos="fade-down">Education <i class="fas fa-graduation-cap"></i></h2>
 
+                <!-- Master's Degree (alone at the top) -->
                 <div class="education-item" data-aos="fade-up" data-aos-duration="1000">
                     <h3>Master of Science in Engineering Sciences (2022 - 2024)</h3>
                     <p class="degree-institution"><strong><em>Dartmouth College, Thayer School of Engineering</em></strong></p>
                     <p class="degree-focus">Focus: Medical Devices, Human-Centered Design</p>
                 </div>
 
-                <div class="education-item" data-aos="fade-up" data-aos-duration="1400">
-                    <h3>Bachelor of Engineering (2017 - 2022)</h3>
-                    <p class="degree-institution"><strong><em>Dartmouth College, Thayer School of Engineering</em></strong></p>
-                    <p class="degree-focus">Focus: Bioelectronics, Biomechanics</p>
-                </div>
+                <!-- Flexbox for Bachelor's Degrees -->
+                <div class="bachelor-degrees">
+                    <div class="education-item" data-aos="fade-up" data-aos-duration="1400">
+                        <h3>Bachelor of Engineering (2017 - 2022)</h3>
+                        <p class="degree-institution"><strong><em>Dartmouth College, Thayer School of Engineering</em></strong></p>
+                        <p class="degree-focus">Focus: Bioelectronics, Biomechanics</p>
+                    </div>
 
-                <div class="education-item" data-aos="fade-up" data-aos-duration="1800">
-                    <h3>Bachelor of Arts (2017 - 2021)</h3>
-                    <p class="degree-institution"><strong><em>Dartmouth College</em></strong></p>
-                    <p class="degree-focus">Focus: Biomathematics, Engineering Sciences</p>
+                    <div class="education-item" data-aos="fade-up" data-aos-duration="1800">
+                        <h3>Bachelor of Arts (2017 - 2021)</h3>
+                        <p class="degree-institution"><strong><em>Dartmouth College</em></strong></p>
+                        <p class="degree-focus">Focus: Biomathematics, Engineering Sciences</p>
+                    </div>
                 </div>
             </section>
 
