@@ -85,6 +85,30 @@
             margin-bottom: 40px;
         }
 
+        .education {
+            margin-top: 50px;
+        }
+
+        /* Dynamic Text Box for Degrees */
+        .education-item {
+            background-color: #4FACFE;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .education-item:hover {
+            transform: translateY(-10px); /* Dynamic effect on hover */
+        }
+
+        .education-item h3,
+        .education-item p {
+            margin: 0;
+        }
+
         .lists {
             margin-top: 50px;
         }
@@ -165,6 +189,7 @@
             <!-- Education Section -->
             <section class="education">
                 <h2 data-aos="fade-down"><i class="fas fa-graduation-cap"></i> Education</h2>
+
                 <div class="education-item" data-aos="fade-up" data-aos-duration="1000">
                     <h3>Master of Science in Engineering Sciences (2022 - 2024)</h3>
                     <p><strong><em>Dartmouth College, Thayer School of Engineering</em></strong></p>
@@ -266,5 +291,6 @@
     </script>
 
 </body>
-</html> 
+</html>
+
 
