@@ -146,24 +146,26 @@
             margin-bottom: 30px;
         }
 
+        /* Use flexbox for lists */
         ul {
             list-style-type: none;
             padding: 0;
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
+            justify-content: space-around;
         }
 
         ul li {
             background-color: #4FACFE;
-            margin: 10px;
+            margin: 5px;
             padding: 10px;
             border-radius: 5px;
-            width: 22%;
+            flex: 1 1 40%; /* Makes sure two items fit per row */
+            box-sizing: border-box;
             text-align: center;
             transition: transform 0.3s ease;
             color: #FFFFFF;
-            font-size: 1.3rem;
+            font-size: 1.2rem;
         }
 
         ul li:hover {
@@ -223,7 +225,7 @@
             }
 
             ul li {
-                width: 40%; /* Two items per row */
+                flex: 1 1 45%; /* Two items per row */
             }
 
             .bachelor-degrees {
@@ -258,8 +260,8 @@
             }
 
             ul li {
-                width: 40%; /* Fit two items per row on phone screens */
-                font-size: 0.9rem; /* Smaller font size to fit more items */
+                flex: 1 1 45%; /* Two items per row on smaller screens */
+                font-size: 0.9rem;
             }
 
             .bachelor-degrees {
