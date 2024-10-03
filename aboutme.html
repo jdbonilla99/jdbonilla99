@@ -12,13 +12,6 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <style>
-        /* Base Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         body {
             font-family: 'Montserrat', sans-serif;
             margin: 0;
@@ -27,15 +20,14 @@
         }
 
         .about-me {
-            background-image: url('Jonathan.jpeg'); /* Path to the image */
+            background-image: url('Jonathan.jpeg');
             background-size: cover;
             background-position: center;
             display: flex;
             justify-content: center;
             align-items: center;
-            color: black;
             position: relative;
-            min-height: 100vh; 
+            min-height: 100vh;
             padding: 20px;
         }
 
@@ -72,7 +64,7 @@
             border-bottom: 2px solid #001f3f;
             padding-bottom: 10px;
             display: inline-block;
-            margin-bottom: 30px; /* Added more space on laptop screens */
+            margin-bottom: 30px;
         }
 
         h2 {
@@ -246,9 +238,8 @@
                 max-width: 80%;
             }
 
-            /* Make degree titles smaller on phone */
             .education-item h3 {
-                font-size: 1.3rem; /* Matching size to list items */
+                font-size: 1.3rem;
             }
         }
 
@@ -267,7 +258,8 @@
             }
 
             ul li {
-                width: 100%;
+                width: 45%;
+                font-size: 0.9rem;
             }
 
             .bachelor-degrees {
@@ -278,12 +270,16 @@
                 max-width: 100%;
             }
 
-            .education-item:first-of-type {
-                max-width: 100%;
+            .education-item h3 {
+                font-size: 1.2rem;
+                margin-bottom: 5px;
             }
 
-            .education-item h3 {
-                font-size: 1.2rem; /* Matching degree title size with list item size */
+            /* Ensure the dates are on a separate line */
+            .education-item h3::after {
+                content: ' ';
+                display: block;
+                margin-top: 5px;
             }
 
             .home-link .button {
@@ -326,23 +322,23 @@
             <section class="education">
                 <h2 data-aos="fade-down">Education <i class="fas fa-graduation-cap"></i></h2>
 
-                <!-- Master's Degree (alone at the top) -->
+                <!-- Master's Degree -->
                 <div class="education-item" data-aos="fade-up" data-aos-duration="1000">
-                    <h3>Master of Science in Engineering Sciences (2022 - 2024)</h3>
+                    <h3>Master of Science in Engineering Sciences <br>(2022 - 2024)</h3>
                     <p class="degree-institution"><strong><em>Dartmouth College, Thayer School of Engineering</em></strong></p>
                     <p class="degree-focus">Focus: Medical Devices, Human-Centered Design</p>
                 </div>
 
-                <!-- Flexbox for Bachelor's Degrees -->
+                <!-- Bachelor's Degrees -->
                 <div class="bachelor-degrees">
                     <div class="education-item" data-aos="fade-up" data-aos-duration="1400">
-                        <h3>Bachelor of Engineering (2017 - 2022)</h3>
+                        <h3>Bachelor of Engineering <br>(2017 - 2022)</h3>
                         <p class="degree-institution"><strong><em>Dartmouth College, Thayer School of Engineering</em></strong></p>
                         <p class="degree-focus">Focus: Bioelectronics, Biomechanics</p>
                     </div>
 
                     <div class="education-item" data-aos="fade-up" data-aos-duration="1800">
-                        <h3>Bachelor of Arts (2017 - 2021)</h3>
+                        <h3>Bachelor of Arts <br>(2017 - 2021)</h3>
                         <p class="degree-institution"><strong><em>Dartmouth College</em></strong></p>
                         <p class="degree-focus">Focus: Biomathematics, Engineering Sciences</p>
                     </div>
@@ -420,7 +416,7 @@
             <!-- Home and Next Links -->
             <div class="home-link" data-aos="fade-up" data-aos-duration="2200">
                 <a href="index.html" class="button">Home</a>
-                <a href="masters.html" class="button">Next</a> <!-- Linked to masters.html -->
+                <a href="masters.html" class="button">Next</a>
             </div>
         </div>
     </section>
@@ -432,6 +428,7 @@
 
 </body>
 </html>
+
 
 
 
